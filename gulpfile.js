@@ -71,6 +71,9 @@ const paths = {
         routesDir: path.join('src', 'routes'),
         routes:    path.posix.join('src', 'routes', '**/*'),
 
+        servicesDir: path.join('src', 'services'),
+        services:    path.posix.join('src', 'services', '**/*'),
+
         spaDir: path.join('src', 'spa'),
         spa:    path.posix.join('src', 'spa', '**/*'),
 
@@ -285,6 +288,9 @@ export const copyPlugins = createCopyTask('copyPlugins', { glob: paths.src.plugi
 /** Copia src/routes/ → app/routes/. */
 export const copyRoutes = createCopyTask('copyRoutes', { glob: paths.src.routes, checkPath: paths.src.routesDir });
 
+/** Copia src/services/ → app/services/. */
+export const copyServices = createCopyTask('copyServices', { glob: paths.src.services, checkPath: paths.src.servicesDir });
+
 /** Copia src/spa/ → app/spa/. */
 export const copySpa = createCopyTask('copySpa', { glob: paths.src.spa, checkPath: paths.src.spaDir });
 
@@ -377,6 +383,7 @@ const buildSources = parallel(
     copyPagesComponents,
     copyPlugins,
     copyRoutes,
+    copyServices,
     copySpa,
     copyScripts,
     copyMain,
@@ -415,11 +422,11 @@ const watchTask = () => {
         [paths.src.pagesComponents, copyPagesComponents],
         [paths.src.plugins,       copyPlugins],
         [paths.src.routes,        copyRoutes],
+        [paths.src.services,      copyServices],
         [paths.src.spa,           copySpa],
         [paths.src.scripts,       copyScripts],
         [paths.src.main,          copyMain],
         [paths.src.scssAll,       series(styles, generateShiki, copyMarkdownShiki)],
-        [paths.src.scriptsNoMap,  series(generateShiki, copyMarkdownShiki)],
     ];
 
     for (const [glob, task] of watchers) {

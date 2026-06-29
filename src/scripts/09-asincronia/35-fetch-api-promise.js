@@ -15,8 +15,8 @@
 
 
     /**
-     * @typedef {import('../../types/fetch-api-types.js').Empleado } Empleado
-     * @typedef {import('../../types/fetch-api-types.js').EmpleadosResponse } EmpleadosResponse
+     * @typedef {import('../../../types/fetch-api-types.js').Empleado } Empleado
+     * @typedef {import('../../../types/fetch-api-types.js').EmpleadosResponse } EmpleadosResponse
      */
 
 
@@ -55,7 +55,8 @@
          * @type {string}
          */
         
-        const url = './src/services/empleados.json';
+        //const url = './src/services/empleados.json';
+        const url = 'app/services/empleados.json';
 
 
         fetch(url)

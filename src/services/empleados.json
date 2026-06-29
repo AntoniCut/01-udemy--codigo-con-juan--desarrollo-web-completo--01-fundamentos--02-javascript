@@ -1,0 +1,37 @@
+{
+  "empleados": [
+    {
+      "id": 1,
+      "nombre": "Juan",
+      "apellido": "Pérez",
+      "email": "juan.perez@example.com",
+      "puesto": "Desarrollador Web"
+    },
+
+    {
+      "id": 2,
+      "nombre": "María",
+      "apellido": "Gómez",
+      "email": "maria.gomez@example.com",
+      "puesto": "Diseñadora Gráfica"
+    },
+
+    {
+      "id": 3,
+      "nombre": "Carlos",
+      "apellido": "López",
+      "email": "carlos.lopez@example.com",
+      "puesto": "Analista de Sistemas"
+    },
+
+    {
+      "id": 4,
+      "nombre": "Ana",
+      "apellido": "Martínez",
+      "email": "ana.martinez@example.com",
+      "puesto": "Gerente de Proyectos"
+    }
+
+  ]
+  
+}
