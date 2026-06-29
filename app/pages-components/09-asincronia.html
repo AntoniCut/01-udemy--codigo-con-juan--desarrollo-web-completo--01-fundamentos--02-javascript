@@ -1,0 +1,123 @@
+<!--
+    *  -----------------------------------------------------------------------  *
+    *  -----  /09-asincronia.html  --  /src/pages-components/09-asincronia.html  -----  *
+    *  -----------------------------------------------------------------------  *
+-->
+
+<div class="js-page">
+
+    <!--  -----  Hero  -----  -->
+    <div class="js-page__hero">
+        <div class="js-page__hero-badge">
+            <span class="js-page__hero-tag" aria-hidden="true">09</span>
+            <h3 class="js-page__hero-title">Asincronía</h3>
+            <p class="js-page__hero-subtitle">Operaciones no bloqueantes y Fetch API</p>
+        </div>
+    </div>
+
+    <!--  -----  Intro  -----  -->
+    <section class="js-page__intro">
+        <p class="js-page__intro-text">
+            JavaScript es <strong>single-threaded</strong>, pero puede manejar tareas que
+            tardan (peticiones HTTP, timers, lecturas de disco) sin bloquear el hilo
+            principal gracias al modelo asíncrono basado en el <strong>Event Loop</strong>.
+        </p>
+        <p class="js-page__intro-text">
+            Aprenderás <code>try / catch</code> para errores, <strong>Promises</strong>
+            como abstracción fundamental, <code>async / await</code> para escribir código
+            asíncrono como si fuera síncrono, y la <strong>Fetch API</strong> para
+            comunicarte con servidores.
+        </p>
+    </section>
+
+    <!--  -----  Features  -----  -->
+    <section class="js-page__features">
+
+        <h3 class="js-page__features-title">Conceptos que verás</h3>
+
+        <div class="js-page__features-grid">
+
+            <article class="js-page__feature">
+                <span class="js-page__feature-icon" aria-hidden="true">🛡️</span>
+                <h4 class="js-page__feature-title">try / catch / finally</h4>
+                <p class="js-page__feature-text">
+                    Manejo de errores con bloques <code>try</code>, captura con
+                    <code>catch</code> y limpieza con <code>finally</code>.
+                    Lanzar errores con <code>throw new Error()</code>.
+                </p>
+            </article>
+
+            <article class="js-page__feature">
+                <span class="js-page__feature-icon" aria-hidden="true">🤝</span>
+                <h4 class="js-page__feature-title">Promises</h4>
+                <p class="js-page__feature-text">
+                    El objeto <code>Promise</code> con estados <em>pending</em>,
+                    <em>fulfilled</em> y <em>rejected</em>. Encadenamiento con
+                    <code>.then()</code> y <code>.catch()</code>.
+                </p>
+            </article>
+
+            <article class="js-page__feature">
+                <span class="js-page__feature-icon" aria-hidden="true">🔔</span>
+                <h4 class="js-page__feature-title">Notification API</h4>
+                <p class="js-page__feature-text">
+                    Notificaciones nativas del navegador con <code>new Notification()</code>,
+                    pidiendo permiso al usuario y mostrando mensajes del sistema.
+                </p>
+            </article>
+
+            <article class="js-page__feature">
+                <span class="js-page__feature-icon" aria-hidden="true">⏱️</span>
+                <h4 class="js-page__feature-title">async / await</h4>
+                <p class="js-page__feature-text">
+                    Sintaxis moderna para escribir promesas de forma secuencial,
+                    manejo de errores con <code>try / catch</code> y funciones
+                    <code>async</code> que devuelven promesas automáticamente.
+                </p>
+            </article>
+
+            <article class="js-page__feature">
+                <span class="js-page__feature-icon" aria-hidden="true">🔗</span>
+                <h4 class="js-page__feature-title">Promise.all</h4>
+                <p class="js-page__feature-text">
+                    Ejecutar múltiples promesas en paralelo y esperar a que todas
+                    se resuelvan con <code>Promise.all([...])</code>.
+                </p>
+            </article>
+
+            <article class="js-page__feature">
+                <span class="js-page__feature-icon" aria-hidden="true">🌐</span>
+                <h4 class="js-page__feature-title">Fetch API</h4>
+                <p class="js-page__feature-text">
+                    <code>fetch(url)</code> para peticiones HTTP, manejo de
+                    <code>response.json()</code>, headers, métodos <code>POST</code> /
+                    <code>GET</code> y errores de red.
+                </p>
+            </article>
+
+        </div>
+    </section>
+
+    <!--  -----  Conceptos clave  -----  -->
+    <section class="js-page__tags-section">
+
+        <h3 class="js-page__tags-title">Conceptos Clave</h3>
+
+        <ul class="js-page__tags">
+            <li class="js-page__tag">try / catch</li>
+            <li class="js-page__tag">throw</li>
+            <li class="js-page__tag">Promise</li>
+            <li class="js-page__tag">.then / .catch</li>
+            <li class="js-page__tag">async / await</li>
+            <li class="js-page__tag">Promise.all</li>
+            <li class="js-page__tag">Promise.race</li>
+            <li class="js-page__tag">fetch()</li>
+            <li class="js-page__tag">Response</li>
+            <li class="js-page__tag">JSON</li>
+            <li class="js-page__tag">Event Loop</li>
+            <li class="js-page__tag">Notification API</li>
+        </ul>
+
+    </section>
+
+</div>

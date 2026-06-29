@@ -1,0 +1,88 @@
+<pre class="shiki dark-plus" style="background-color:#1E1E1E;color:#D4D4D4" tabindex="0"><code><span class="line"><span style="color:#D4D4D4">(() </span><span style="color:#569CD6">=></span><span style="color:#D4D4D4"> {</span></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"><span style="color:#9CDCFE">    console</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">clear</span><span style="color:#D4D4D4">();</span></span>
+<span class="line"><span style="color:#9CDCFE">    console</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">log</span><span style="color:#D4D4D4">(</span><span style="color:#CE9178">'</span><span style="color:#D7BA7D">\n</span><span style="color:#CE9178">'</span><span style="color:#D4D4D4">);</span></span>
+<span class="line"><span style="color:#9CDCFE">    console</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">warn</span><span style="color:#D4D4D4">(</span><span style="color:#CE9178">'-----  32-async-await.js  -----'</span><span style="color:#D4D4D4">);</span></span>
+<span class="line"><span style="color:#9CDCFE">    console</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">log</span><span style="color:#D4D4D4">(</span><span style="color:#CE9178">'</span><span style="color:#D7BA7D">\n</span><span style="color:#CE9178">'</span><span style="color:#D4D4D4">);</span></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A9955">    /**</span></span>
+<span class="line"><span style="color:#6A9955">     * -----------------------------------------</span></span>
+<span class="line"><span style="color:#6A9955">     * -----  `descargarNuevosClientes()`  -----</span></span>
+<span class="line"><span style="color:#6A9955">     * -----------------------------------------</span></span>
+<span class="line"><span style="color:#6A9955">     * - Simula la descarga de nuevos clientes desde una base de datos o una API.</span></span>
+<span class="line"><span style="color:#6A9955">     * </span><span style="color:#569CD6">@returns</span><span style="color:#4EC9B0"> {Promise&#x3C;string>}</span></span>
+<span class="line"><span style="color:#6A9955">     */</span></span>
+<span class="line"><span style="color:#D4D4D4">    </span></span>
+<span class="line"><span style="color:#569CD6">    function</span><span style="color:#DCDCAA"> descargarNuevosClientes</span><span style="color:#D4D4D4">() {</span></span>
+<span class="line"><span style="color:#D4D4D4">        </span></span>
+<span class="line"><span style="color:#C586C0">        return</span><span style="color:#569CD6"> new</span><span style="color:#4EC9B0"> Promise</span><span style="color:#D4D4D4">(</span><span style="color:#9CDCFE">resolve</span><span style="color:#569CD6"> =></span><span style="color:#D4D4D4"> {</span></span>
+<span class="line"><span style="color:#D4D4D4">            </span></span>
+<span class="line"><span style="color:#9CDCFE">            console</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">log</span><span style="color:#D4D4D4">(</span><span style="color:#CE9178">'</span><span style="color:#D7BA7D">\n</span><span style="color:#CE9178">Descargando clientes... espere...'</span><span style="color:#D4D4D4">);</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#DCDCAA">            setTimeout</span><span style="color:#D4D4D4">(() </span><span style="color:#569CD6">=></span><span style="color:#DCDCAA"> resolve</span><span style="color:#D4D4D4">(</span><span style="color:#CE9178">'</span><span style="color:#D7BA7D">\n</span><span style="color:#CE9178">Los Clientes fueron Descargados'</span><span style="color:#D4D4D4">), </span><span style="color:#B5CEA8">5000</span><span style="color:#D4D4D4">);</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#D4D4D4">        });</span></span>
+<span class="line"><span style="color:#D4D4D4">    }</span></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A9955">    /**</span></span>
+<span class="line"><span style="color:#6A9955">     * -----------------------------------------</span></span>
+<span class="line"><span style="color:#6A9955">     * -----  `descargarUltimosPedidos()`  -----</span></span>
+<span class="line"><span style="color:#6A9955">     * -----------------------------------------</span></span>
+<span class="line"><span style="color:#6A9955">     * - Simula la descarga de los últimos pedidos desde una base de datos o una API.</span></span>
+<span class="line"><span style="color:#6A9955">     * </span><span style="color:#569CD6">@returns</span><span style="color:#4EC9B0"> {Promise&#x3C;string>}</span></span>
+<span class="line"><span style="color:#6A9955">     */</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#569CD6">    function</span><span style="color:#DCDCAA"> descargarUltimosPedidos</span><span style="color:#D4D4D4">() {</span></span>
+<span class="line"><span style="color:#D4D4D4">        </span></span>
+<span class="line"><span style="color:#C586C0">        return</span><span style="color:#569CD6"> new</span><span style="color:#4EC9B0"> Promise</span><span style="color:#D4D4D4">(</span><span style="color:#9CDCFE">resolve</span><span style="color:#569CD6"> =></span><span style="color:#D4D4D4"> {</span></span>
+<span class="line"><span style="color:#D4D4D4">            </span></span>
+<span class="line"><span style="color:#9CDCFE">            console</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">log</span><span style="color:#D4D4D4">(</span><span style="color:#CE9178">'</span><span style="color:#D7BA7D">\n</span><span style="color:#CE9178">Descargando pedidos... espere...'</span><span style="color:#D4D4D4">);</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#DCDCAA">            setTimeout</span><span style="color:#D4D4D4">(() </span><span style="color:#569CD6">=></span><span style="color:#DCDCAA"> resolve</span><span style="color:#D4D4D4">(</span><span style="color:#CE9178">'</span><span style="color:#D7BA7D">\n</span><span style="color:#CE9178">Los Pedidos fueron Descargados'</span><span style="color:#D4D4D4">), </span><span style="color:#B5CEA8">3000</span><span style="color:#D4D4D4">);</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#D4D4D4">        });</span></span>
+<span class="line"><span style="color:#D4D4D4">    }</span></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A9955">    /**</span></span>
+<span class="line"><span style="color:#6A9955">     * --------------------</span></span>
+<span class="line"><span style="color:#6A9955">     * -----  `app()`  -----</span></span>
+<span class="line"><span style="color:#6A9955">     * --------------------</span></span>
+<span class="line"><span style="color:#6A9955">     * - Async Await es una forma de manejar las promesas de una manera más sencilla y legible, evitando el uso de callbacks y encadenamientos de promesas.</span></span>
+<span class="line"><span style="color:#6A9955">     * </span><span style="color:#569CD6">@async</span></span>
+<span class="line"><span style="color:#6A9955">     * </span><span style="color:#569CD6">@returns</span><span style="color:#4EC9B0"> {Promise&#x3C;void>}</span><span style="color:#6A9955"> No retorna nada, solo ejecuta el código dentro de la función.</span></span>
+<span class="line"><span style="color:#6A9955">     */</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#569CD6">    async</span><span style="color:#569CD6"> function</span><span style="color:#DCDCAA"> app</span><span style="color:#D4D4D4">() {</span></span>
+<span class="line"><span style="color:#D4D4D4">        </span></span>
+<span class="line"><span style="color:#9CDCFE">        console</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">log</span><span style="color:#D4D4D4">(</span><span style="color:#CE9178">'Iniciando App...'</span><span style="color:#D4D4D4">);</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#C586C0">        try</span><span style="color:#D4D4D4"> {</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#569CD6">            const</span><span style="color:#4FC1FF"> clientes</span><span style="color:#D4D4D4"> = </span><span style="color:#C586C0">await</span><span style="color:#DCDCAA"> descargarNuevosClientes</span><span style="color:#D4D4D4">();</span></span>
+<span class="line"><span style="color:#569CD6">            const</span><span style="color:#4FC1FF"> pedidos</span><span style="color:#D4D4D4"> = </span><span style="color:#C586C0">await</span><span style="color:#DCDCAA"> descargarUltimosPedidos</span><span style="color:#D4D4D4">();</span></span>
+<span class="line"><span style="color:#D4D4D4">            </span></span>
+<span class="line"><span style="color:#9CDCFE">            console</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">log</span><span style="color:#D4D4D4">(</span><span style="color:#CE9178">'</span><span style="color:#D7BA7D">\n</span><span style="color:#CE9178">clientes => '</span><span style="color:#D4D4D4">, </span><span style="color:#9CDCFE">clientes</span><span style="color:#D4D4D4">);</span></span>
+<span class="line"><span style="color:#9CDCFE">            console</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">log</span><span style="color:#D4D4D4">(</span><span style="color:#CE9178">'</span><span style="color:#D7BA7D">\n</span><span style="color:#CE9178">pedidos => '</span><span style="color:#D4D4D4">, </span><span style="color:#9CDCFE">pedidos</span><span style="color:#D4D4D4">);  </span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#9CDCFE">            console</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">log</span><span style="color:#D4D4D4">(</span><span style="color:#CE9178">'</span><span style="color:#D7BA7D">\n</span><span style="color:#CE9178">Continuando con otras tareas despues de la descarga de los clientes y pedidos...'</span><span style="color:#D4D4D4">);</span></span>
+<span class="line"><span style="color:#D4D4D4">            </span></span>
+<span class="line"><span style="color:#D4D4D4">        } </span><span style="color:#C586C0">catch</span><span style="color:#D4D4D4"> (</span><span style="color:#9CDCFE">error</span><span style="color:#D4D4D4">) {</span></span>
+<span class="line"><span style="color:#9CDCFE">            console</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">error</span><span style="color:#D4D4D4">(</span><span style="color:#9CDCFE">error</span><span style="color:#D4D4D4">);</span></span>
+<span class="line"><span style="color:#D4D4D4">        }</span></span>
+<span class="line"><span style="color:#D4D4D4">                </span></span>
+<span class="line"><span style="color:#D4D4D4">    }</span></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A9955">    //  -----  Ejecutar la función principal de la aplicación. -----  </span></span>
+<span class="line"><span style="color:#DCDCAA">    app</span><span style="color:#D4D4D4">();</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#9CDCFE">    console</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">log</span><span style="color:#D4D4D4">(</span><span style="color:#CE9178">'</span><span style="color:#D7BA7D">\n</span><span style="color:#CE9178">Continuando con otras tareas...'</span><span style="color:#D4D4D4">);</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#D4D4D4">    </span></span>
+<span class="line"><span style="color:#D4D4D4">})();</span></span>
+<span class="line"></span></code></pre>

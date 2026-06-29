@@ -1,0 +1,9 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /codigo-con-juan/desarrollo-web-completo/01-fundamentos/02-javascript/
+    RewriteRule ^index\.html$ - [L]
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule . /codigo-con-juan/desarrollo-web-completo/01-fundamentos/02-javascript/index.html [L]
+</IfModule>
+

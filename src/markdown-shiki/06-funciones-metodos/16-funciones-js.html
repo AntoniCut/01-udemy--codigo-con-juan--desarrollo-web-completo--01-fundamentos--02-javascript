@@ -1,0 +1,56 @@
+<pre class="shiki dark-plus" style="background-color:#1E1E1E;color:#D4D4D4" tabindex="0"><code><span class="line"><span style="color:#D4D4D4">(() </span><span style="color:#569CD6">=></span><span style="color:#D4D4D4"> {</span></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"><span style="color:#9CDCFE">    console</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">clear</span><span style="color:#D4D4D4">();</span></span>
+<span class="line"><span style="color:#9CDCFE">    console</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">log</span><span style="color:#D4D4D4">(</span><span style="color:#CE9178">'</span><span style="color:#D7BA7D">\n</span><span style="color:#CE9178">'</span><span style="color:#D4D4D4">);</span></span>
+<span class="line"><span style="color:#9CDCFE">    console</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">warn</span><span style="color:#D4D4D4">(</span><span style="color:#CE9178">'-----  16-funciones.js  -----'</span><span style="color:#D4D4D4">);</span></span>
+<span class="line"><span style="color:#9CDCFE">    console</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">log</span><span style="color:#D4D4D4">(</span><span style="color:#CE9178">'</span><span style="color:#D7BA7D">\n</span><span style="color:#CE9178">'</span><span style="color:#D4D4D4">);</span></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A9955">    /*  </span></span>
+<span class="line"><span style="color:#6A9955">        -----  Llamada o invocación de la función  ----- </span></span>
+<span class="line"><span style="color:#6A9955">        - Las funciones tradicionales se pueden llamar antes de su declaración, </span></span>
+<span class="line"><span style="color:#6A9955">          esto se debe a un proceso llamado "hoisting" (elevación), donde el motor de JavaScript </span></span>
+<span class="line"><span style="color:#6A9955">          eleva las declaraciones de funciones al inicio del ámbito de ejecución. </span></span>
+<span class="line"><span style="color:#6A9955">          Por lo tanto, puedes invocar una función tradicional antes de su declaración sin problemas.</span></span>
+<span class="line"><span style="color:#6A9955">    */</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#DCDCAA">    sumar1</span><span style="color:#D4D4D4">();</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A9955">    //  -----  Declaración de la función  -----</span></span>
+<span class="line"><span style="color:#569CD6">    function</span><span style="color:#DCDCAA"> sumar1</span><span style="color:#D4D4D4">() {</span></span>
+<span class="line"><span style="color:#D4D4D4">        </span></span>
+<span class="line"><span style="color:#9CDCFE">        console</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">log</span><span style="color:#D4D4D4">(</span><span style="color:#CE9178">'10 + 10 => '</span><span style="color:#D4D4D4">, </span><span style="color:#B5CEA8">10</span><span style="color:#D4D4D4"> + </span><span style="color:#B5CEA8">10</span><span style="color:#D4D4D4">);</span></span>
+<span class="line"><span style="color:#D4D4D4">    }</span></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A9955">    /*  </span></span>
+<span class="line"><span style="color:#6A9955">        -----  Expresión de la función  ----- </span></span>
+<span class="line"><span style="color:#6A9955">        - Las funciones expresadas no se elevan, lo que significa que no puedes invocarlas antes de su declaración. </span></span>
+<span class="line"><span style="color:#6A9955">          Si intentas hacerlo, obtendrás un error de referencia (ReferenceError) </span></span>
+<span class="line"><span style="color:#6A9955">          porque la variable que contiene la función no ha sido asignada aún.</span></span>
+<span class="line"><span style="color:#6A9955">    */</span></span>
+<span class="line"><span style="color:#D4D4D4">    </span></span>
+<span class="line"><span style="color:#569CD6">    const</span><span style="color:#DCDCAA"> sumar2</span><span style="color:#D4D4D4"> = </span><span style="color:#569CD6">function</span><span style="color:#D4D4D4"> () {</span></span>
+<span class="line"><span style="color:#D4D4D4">        </span></span>
+<span class="line"><span style="color:#9CDCFE">        console</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">log</span><span style="color:#D4D4D4">(</span><span style="color:#CE9178">'</span><span style="color:#D7BA7D">\n</span><span style="color:#CE9178">3 + 3 => '</span><span style="color:#D4D4D4">, </span><span style="color:#B5CEA8">3</span><span style="color:#D4D4D4"> + </span><span style="color:#B5CEA8">3</span><span style="color:#D4D4D4">);</span></span>
+<span class="line"><span style="color:#D4D4D4">    }</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#DCDCAA">    sumar2</span><span style="color:#D4D4D4">();</span></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A9955">    /*  -----  IIFE  (Immediately Invoked Function Expression)  ----- </span></span>
+<span class="line"><span style="color:#6A9955">        - Es una función que se define y se ejecuta inmediatamente después de su creación. </span></span>
+<span class="line"><span style="color:#6A9955">        - Se utiliza para crear un ámbito local y evitar la contaminación del ámbito global.</span></span>
+<span class="line"><span style="color:#6A9955">    */</span></span>
+<span class="line"><span style="color:#D4D4D4">    (</span><span style="color:#569CD6">function</span><span style="color:#D4D4D4"> () {</span></span>
+<span class="line"><span style="color:#D4D4D4">        </span></span>
+<span class="line"><span style="color:#9CDCFE">        console</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">log</span><span style="color:#D4D4D4">(</span><span style="color:#CE9178">'</span><span style="color:#D7BA7D">\n</span><span style="color:#CE9178">Función IIFE  -  5 + 5 => '</span><span style="color:#D4D4D4">, </span><span style="color:#B5CEA8">5</span><span style="color:#D4D4D4"> + </span><span style="color:#B5CEA8">5</span><span style="color:#D4D4D4">);</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#D4D4D4">    })();</span></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"><span style="color:#D4D4D4">})();</span></span>
+<span class="line"></span></code></pre>

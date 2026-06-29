@@ -1,0 +1,136 @@
+<pre class="shiki dark-plus" style="background-color:#1E1E1E;color:#D4D4D4" tabindex="0"><code><span class="line"><span style="color:#D4D4D4">(() </span><span style="color:#569CD6">=></span><span style="color:#D4D4D4"> {</span></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"><span style="color:#9CDCFE">    console</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">clear</span><span style="color:#D4D4D4">();</span></span>
+<span class="line"><span style="color:#9CDCFE">    console</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">log</span><span style="color:#D4D4D4">(</span><span style="color:#CE9178">'</span><span style="color:#D7BA7D">\n</span><span style="color:#CE9178">'</span><span style="color:#D4D4D4">);</span></span>
+<span class="line"><span style="color:#9CDCFE">    console</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">warn</span><span style="color:#D4D4D4">(</span><span style="color:#CE9178">'-----  28-poo-clases-herencia.js  -----'</span><span style="color:#D4D4D4">);</span></span>
+<span class="line"><span style="color:#9CDCFE">    console</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">log</span><span style="color:#D4D4D4">(</span><span style="color:#CE9178">'</span><span style="color:#D7BA7D">\n</span><span style="color:#CE9178">'</span><span style="color:#D4D4D4">);</span></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A9955">    /*</span></span>
+<span class="line"><span style="color:#6A9955">        --------------------</span></span>
+<span class="line"><span style="color:#6A9955">        -----  CLASES  -----</span></span>
+<span class="line"><span style="color:#6A9955">        --------------------</span></span>
+<span class="line"><span style="color:#6A9955">    */</span></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A9955">    /**</span></span>
+<span class="line"><span style="color:#6A9955">     * ------------------------------</span></span>
+<span class="line"><span style="color:#6A9955">     * -----  `class Producto`  -----</span></span>
+<span class="line"><span style="color:#6A9955">     * ------------------------------</span></span>
+<span class="line"><span style="color:#6A9955">     * `Representa un producto dentro de la aplicación`</span></span>
+<span class="line"><span style="color:#6A9955">     * </span><span style="color:#569CD6">@class</span></span>
+<span class="line"><span style="color:#6A9955">     */</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#569CD6">    class</span><span style="color:#4EC9B0"> Producto</span><span style="color:#D4D4D4"> {</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A9955">        /**</span></span>
+<span class="line"><span style="color:#6A9955">         * Crea una nueva instancia de Producto.</span></span>
+<span class="line"><span style="color:#6A9955">         * </span><span style="color:#569CD6">@constructor</span></span>
+<span class="line"><span style="color:#6A9955">         * </span><span style="color:#569CD6">@param</span><span style="color:#4EC9B0"> {string}</span><span style="color:#9CDCFE"> nombre</span><span style="color:#6A9955"> - Nombre del producto</span></span>
+<span class="line"><span style="color:#6A9955">         * </span><span style="color:#569CD6">@param</span><span style="color:#4EC9B0"> {number}</span><span style="color:#9CDCFE"> precio</span><span style="color:#6A9955"> - Precio del producto</span></span>
+<span class="line"><span style="color:#6A9955">         */</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#569CD6">        constructor</span><span style="color:#D4D4D4">(</span><span style="color:#9CDCFE">nombre</span><span style="color:#D4D4D4">, </span><span style="color:#9CDCFE">precio</span><span style="color:#D4D4D4">) {</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A9955">            /** </span><span style="color:#569CD6">@type</span><span style="color:#4EC9B0"> {string}</span><span style="color:#6A9955"> */</span></span>
+<span class="line"><span style="color:#569CD6">            this</span><span style="color:#D4D4D4">.</span><span style="color:#9CDCFE">nombre</span><span style="color:#D4D4D4"> = </span><span style="color:#9CDCFE">nombre</span><span style="color:#D4D4D4">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A9955">            /** </span><span style="color:#569CD6">@type</span><span style="color:#4EC9B0"> {number}</span><span style="color:#6A9955"> */</span></span>
+<span class="line"><span style="color:#569CD6">            this</span><span style="color:#D4D4D4">.</span><span style="color:#9CDCFE">precio</span><span style="color:#D4D4D4"> = </span><span style="color:#9CDCFE">precio</span><span style="color:#D4D4D4">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#D4D4D4">        }</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A9955">        /**</span></span>
+<span class="line"><span style="color:#6A9955">         * `Devuelve una descripción del producto con su precio`</span></span>
+<span class="line"><span style="color:#6A9955">         * </span><span style="color:#569CD6">@method</span><span style="color:#6A9955">        </span></span>
+<span class="line"><span style="color:#6A9955">         * </span><span style="color:#569CD6">@returns</span><span style="color:#4EC9B0"> {string}</span><span style="color:#6A9955"> Información formateada del producto</span></span>
+<span class="line"><span style="color:#6A9955">         */</span></span>
+<span class="line"><span style="color:#DCDCAA">        formatearProducto</span><span style="color:#D4D4D4">() {</span></span>
+<span class="line"><span style="color:#C586C0">            return</span><span style="color:#CE9178"> `El Producto </span><span style="color:#569CD6">${</span><span style="color:#569CD6">this</span><span style="color:#D4D4D4">.</span><span style="color:#9CDCFE">nombre</span><span style="color:#569CD6">}</span><span style="color:#CE9178"> tiene un precio de: $ </span><span style="color:#569CD6">${</span><span style="color:#569CD6">this</span><span style="color:#D4D4D4">.</span><span style="color:#9CDCFE">precio</span><span style="color:#569CD6">}</span><span style="color:#CE9178">`</span><span style="color:#D4D4D4">;</span></span>
+<span class="line"><span style="color:#D4D4D4">        }</span></span>
+<span class="line"><span style="color:#D4D4D4">    }</span></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"><span style="color:#9CDCFE">    console</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">log</span><span style="color:#D4D4D4">(</span><span style="color:#CE9178">'</span><span style="color:#D7BA7D">\n</span><span style="color:#CE9178">Producto => '</span><span style="color:#D4D4D4">, </span><span style="color:#9CDCFE">Producto</span><span style="color:#D4D4D4">);</span></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A9955">    //  -----  instancia producto1 de la clase Producto  -----</span></span>
+<span class="line"><span style="color:#569CD6">    const</span><span style="color:#4FC1FF"> producto1</span><span style="color:#D4D4D4"> = </span><span style="color:#569CD6">new</span><span style="color:#DCDCAA"> Producto</span><span style="color:#D4D4D4">(</span><span style="color:#CE9178">'Monitor Curvo de 49"'</span><span style="color:#D4D4D4">, </span><span style="color:#B5CEA8">800</span><span style="color:#D4D4D4">);</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#9CDCFE">    console</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">log</span><span style="color:#D4D4D4">(</span><span style="color:#CE9178">'producto1 => '</span><span style="color:#D4D4D4">, </span><span style="color:#9CDCFE">producto1</span><span style="color:#D4D4D4">);</span></span>
+<span class="line"><span style="color:#9CDCFE">    console</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">log</span><span style="color:#D4D4D4">(</span><span style="color:#CE9178">'producto1.formatearProducto() => '</span><span style="color:#D4D4D4">, </span><span style="color:#9CDCFE">producto1</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">formatearProducto</span><span style="color:#D4D4D4">());</span></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A9955">    //  -----  instancia producto2 de la clase Producto  -----</span></span>
+<span class="line"><span style="color:#569CD6">    const</span><span style="color:#4FC1FF"> producto2</span><span style="color:#D4D4D4"> = </span><span style="color:#569CD6">new</span><span style="color:#DCDCAA"> Producto</span><span style="color:#D4D4D4">(</span><span style="color:#CE9178">'Laptop'</span><span style="color:#D4D4D4">, </span><span style="color:#B5CEA8">300</span><span style="color:#D4D4D4">);</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#9CDCFE">    console</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">log</span><span style="color:#D4D4D4">(</span><span style="color:#CE9178">'producto2 => '</span><span style="color:#D4D4D4">, </span><span style="color:#9CDCFE">producto2</span><span style="color:#D4D4D4">);</span></span>
+<span class="line"><span style="color:#9CDCFE">    console</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">log</span><span style="color:#D4D4D4">(</span><span style="color:#CE9178">'producto2.formatearProducto() => '</span><span style="color:#D4D4D4">, </span><span style="color:#9CDCFE">producto2</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">formatearProducto</span><span style="color:#D4D4D4">());</span></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A9955">    /*</span></span>
+<span class="line"><span style="color:#6A9955">        ----------------------</span></span>
+<span class="line"><span style="color:#6A9955">        -----  HERENCIA  -----</span></span>
+<span class="line"><span style="color:#6A9955">        ----------------------</span></span>
+<span class="line"><span style="color:#6A9955">    */</span></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A9955">    /**</span></span>
+<span class="line"><span style="color:#6A9955">     * --------------------------------------------</span></span>
+<span class="line"><span style="color:#6A9955">     * -----  `class Libro extends Producto`  -----</span></span>
+<span class="line"><span style="color:#6A9955">     * --------------------------------------------</span></span>
+<span class="line"><span style="color:#6A9955">     * Representa un libro, que es un tipo específico de Producto.</span></span>
+<span class="line"><span style="color:#6A9955">     * Hereda propiedades y métodos de la clase Producto.</span></span>
+<span class="line"><span style="color:#6A9955">     * </span><span style="color:#569CD6">@class</span></span>
+<span class="line"><span style="color:#6A9955">     * </span><span style="color:#569CD6">@extends</span><span style="color:#4EC9B0"> Producto</span></span>
+<span class="line"><span style="color:#6A9955">     */</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#569CD6">    class</span><span style="color:#4EC9B0"> Libro</span><span style="color:#569CD6"> extends</span><span style="color:#4EC9B0"> Producto</span><span style="color:#D4D4D4"> {</span></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A9955">        /**</span></span>
+<span class="line"><span style="color:#6A9955">         * Crea una nueva instancia de Libro.</span></span>
+<span class="line"><span style="color:#6A9955">         * </span><span style="color:#569CD6">@constructor</span></span>
+<span class="line"><span style="color:#6A9955">         * </span><span style="color:#569CD6">@param</span><span style="color:#4EC9B0"> {string}</span><span style="color:#9CDCFE"> nombre</span><span style="color:#6A9955"> - Nombre del libro</span></span>
+<span class="line"><span style="color:#6A9955">         * </span><span style="color:#569CD6">@param</span><span style="color:#4EC9B0"> {number}</span><span style="color:#9CDCFE"> precio</span><span style="color:#6A9955"> - Precio del libro</span></span>
+<span class="line"><span style="color:#6A9955">         * </span><span style="color:#569CD6">@param</span><span style="color:#4EC9B0"> {string}</span><span style="color:#9CDCFE"> isbn</span><span style="color:#6A9955"> - Código ISBN del libro</span></span>
+<span class="line"><span style="color:#6A9955">         */</span></span>
+<span class="line"><span style="color:#569CD6">        constructor</span><span style="color:#D4D4D4">(</span><span style="color:#9CDCFE">nombre</span><span style="color:#D4D4D4">, </span><span style="color:#9CDCFE">precio</span><span style="color:#D4D4D4">, </span><span style="color:#9CDCFE">isbn</span><span style="color:#D4D4D4">) {</span></span>
+<span class="line"><span style="color:#D4D4D4">            </span></span>
+<span class="line"><span style="color:#6A9955">            //  -----  Llama al constructor de la clase padre (Producto)  -----</span></span>
+<span class="line"><span style="color:#569CD6">            super</span><span style="color:#D4D4D4">(</span><span style="color:#9CDCFE">nombre</span><span style="color:#D4D4D4">, </span><span style="color:#9CDCFE">precio</span><span style="color:#D4D4D4">);</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A9955">            /** </span><span style="color:#569CD6">@type</span><span style="color:#4EC9B0"> {string}</span><span style="color:#6A9955"> */</span></span>
+<span class="line"><span style="color:#569CD6">            this</span><span style="color:#D4D4D4">.</span><span style="color:#9CDCFE">isbn</span><span style="color:#D4D4D4"> = </span><span style="color:#9CDCFE">isbn</span><span style="color:#D4D4D4">;</span></span>
+<span class="line"><span style="color:#D4D4D4">        }</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A9955">        /**</span></span>
+<span class="line"><span style="color:#6A9955">         * - Devuelve una descripción del libro incluyendo su ISBN.</span></span>
+<span class="line"><span style="color:#6A9955">         * - Sobrescribe el método formatearProducto de Producto.</span></span>
+<span class="line"><span style="color:#6A9955">         * </span><span style="color:#569CD6">@method</span></span>
+<span class="line"><span style="color:#6A9955">         * </span><span style="color:#569CD6">@override</span></span>
+<span class="line"><span style="color:#6A9955">         * </span><span style="color:#569CD6">@returns</span><span style="color:#4EC9B0"> {string}</span><span style="color:#6A9955"> Información formateada del libro</span></span>
+<span class="line"><span style="color:#6A9955">         */</span></span>
+<span class="line"><span style="color:#DCDCAA">        formatearProducto</span><span style="color:#D4D4D4">() {</span></span>
+<span class="line"><span style="color:#C586C0">            return</span><span style="color:#CE9178"> `</span><span style="color:#569CD6">${</span><span style="color:#569CD6">super</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">formatearProducto</span><span style="color:#D4D4D4">()</span><span style="color:#569CD6">}</span><span style="color:#CE9178"> y su ISBN es </span><span style="color:#569CD6">${</span><span style="color:#569CD6">this</span><span style="color:#D4D4D4">.</span><span style="color:#9CDCFE">isbn</span><span style="color:#569CD6">}</span><span style="color:#CE9178">`</span><span style="color:#D4D4D4">;</span></span>
+<span class="line"><span style="color:#D4D4D4">        }</span></span>
+<span class="line"><span style="color:#D4D4D4">       </span></span>
+<span class="line"><span style="color:#D4D4D4">    }</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#9CDCFE">    console</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">log</span><span style="color:#D4D4D4">(</span><span style="color:#CE9178">'</span><span style="color:#D7BA7D">\n</span><span style="color:#CE9178">Libro => '</span><span style="color:#D4D4D4">, </span><span style="color:#9CDCFE">Libro</span><span style="color:#D4D4D4">);</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#D4D4D4">    </span></span>
+<span class="line"><span style="color:#6A9955">    //  -----  instancia libro de la clase Libro que hereda de Producto  -----</span></span>
+<span class="line"><span style="color:#569CD6">    const</span><span style="color:#4FC1FF"> libro</span><span style="color:#D4D4D4"> = </span><span style="color:#569CD6">new</span><span style="color:#DCDCAA"> Libro</span><span style="color:#D4D4D4">(</span><span style="color:#CE9178">'JavaScript la Revolución'</span><span style="color:#D4D4D4">, </span><span style="color:#B5CEA8">120</span><span style="color:#D4D4D4">, </span><span style="color:#CE9178">'910313981389139'</span><span style="color:#D4D4D4">);</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#9CDCFE">    console</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">log</span><span style="color:#D4D4D4">(</span><span style="color:#CE9178">'</span><span style="color:#D7BA7D">\n</span><span style="color:#CE9178">libro => '</span><span style="color:#D4D4D4">, </span><span style="color:#9CDCFE">libro</span><span style="color:#D4D4D4">);</span></span>
+<span class="line"><span style="color:#9CDCFE">    console</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">log</span><span style="color:#D4D4D4">(</span><span style="color:#CE9178">'</span><span style="color:#D7BA7D">\n</span><span style="color:#CE9178">libro.formatearProducto() => '</span><span style="color:#D4D4D4">, </span><span style="color:#9CDCFE">libro</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">formatearProducto</span><span style="color:#D4D4D4">());</span></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"><span style="color:#D4D4D4">})();</span></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"></span></code></pre>

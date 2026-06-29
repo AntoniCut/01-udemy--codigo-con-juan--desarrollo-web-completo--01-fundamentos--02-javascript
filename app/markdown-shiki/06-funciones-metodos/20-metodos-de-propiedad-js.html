@@ -1,0 +1,75 @@
+<pre class="shiki dark-plus" style="background-color:#1E1E1E;color:#D4D4D4" tabindex="0"><code><span class="line"><span style="color:#6A9955">/**</span></span>
+<span class="line"><span style="color:#6A9955"> *  - `Representa un reproductor de música`</span></span>
+<span class="line"><span style="color:#6A9955"> * </span><span style="color:#569CD6">@typedef</span><span style="color:#4EC9B0"> {Object}</span><span style="color:#4EC9B0"> Reproductor</span></span>
+<span class="line"><span style="color:#6A9955"> * </span><span style="color:#569CD6">@property</span><span style="color:#4EC9B0"> {(id: number) => void}</span><span style="color:#9CDCFE"> reproducir</span><span style="color:#6A9955"> - Reproduce una canción por su ID</span></span>
+<span class="line"><span style="color:#6A9955"> * </span><span style="color:#569CD6">@property</span><span style="color:#4EC9B0"> {() => void}</span><span style="color:#9CDCFE"> pausar</span><span style="color:#6A9955"> - Pausa la reproducción actual</span></span>
+<span class="line"><span style="color:#6A9955"> * </span><span style="color:#569CD6">@property</span><span style="color:#4EC9B0"> {(nombre: string) => void}</span><span style="color:#9CDCFE"> crearPlaylist</span><span style="color:#6A9955"> - Crea una nueva playlist</span></span>
+<span class="line"><span style="color:#6A9955"> * </span><span style="color:#569CD6">@property</span><span style="color:#4EC9B0"> {(nombre: string) => void}</span><span style="color:#9CDCFE"> reproducirPlaylist</span><span style="color:#6A9955"> - Reproduce una playlist existente</span></span>
+<span class="line"><span style="color:#6A9955"> */</span></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"><span style="color:#D4D4D4">(() </span><span style="color:#569CD6">=></span><span style="color:#D4D4D4"> {</span></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"><span style="color:#9CDCFE">    console</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">clear</span><span style="color:#D4D4D4">();</span></span>
+<span class="line"><span style="color:#9CDCFE">    console</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">log</span><span style="color:#D4D4D4">(</span><span style="color:#CE9178">'</span><span style="color:#D7BA7D">\n</span><span style="color:#CE9178">'</span><span style="color:#D4D4D4">);</span></span>
+<span class="line"><span style="color:#9CDCFE">    console</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">warn</span><span style="color:#D4D4D4">(</span><span style="color:#CE9178">'-----  20-metodos-de-propiedad.js  -----'</span><span style="color:#D4D4D4">);</span></span>
+<span class="line"><span style="color:#9CDCFE">    console</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">log</span><span style="color:#D4D4D4">(</span><span style="color:#CE9178">'</span><span style="color:#D7BA7D">\n</span><span style="color:#CE9178">'</span><span style="color:#D4D4D4">);</span></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A9955">    /**</span></span>
+<span class="line"><span style="color:#6A9955">     * - `Objeto que simula un reproductor de música`</span></span>
+<span class="line"><span style="color:#6A9955">     * </span><span style="color:#569CD6">@type</span><span style="color:#4EC9B0"> {Reproductor}</span></span>
+<span class="line"><span style="color:#6A9955">     */</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#569CD6">    const</span><span style="color:#4FC1FF"> reproductor</span><span style="color:#D4D4D4"> = {</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#DCDCAA">        reproducir</span><span style="color:#9CDCFE">:</span><span style="color:#569CD6"> function</span><span style="color:#D4D4D4"> (</span><span style="color:#9CDCFE">id</span><span style="color:#D4D4D4">) {</span></span>
+<span class="line"><span style="color:#9CDCFE">            console</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">log</span><span style="color:#D4D4D4">(</span><span style="color:#CE9178">`Reproduciendo Canción con el ID: </span><span style="color:#569CD6">${</span><span style="color:#9CDCFE">id</span><span style="color:#569CD6">}</span><span style="color:#CE9178">`</span><span style="color:#D4D4D4">);</span></span>
+<span class="line"><span style="color:#D4D4D4">        },</span></span>
+<span class="line"><span style="color:#D4D4D4">       </span></span>
+<span class="line"><span style="color:#DCDCAA">        pausar</span><span style="color:#9CDCFE">:</span><span style="color:#569CD6"> function</span><span style="color:#D4D4D4"> () {</span></span>
+<span class="line"><span style="color:#9CDCFE">            console</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">log</span><span style="color:#D4D4D4">(</span><span style="color:#CE9178">'Pausando...'</span><span style="color:#D4D4D4">);</span></span>
+<span class="line"><span style="color:#D4D4D4">        },</span></span>
+<span class="line"><span style="color:#D4D4D4">       </span></span>
+<span class="line"><span style="color:#DCDCAA">        crearPlaylist</span><span style="color:#9CDCFE">:</span><span style="color:#569CD6"> function</span><span style="color:#D4D4D4"> (</span><span style="color:#9CDCFE">nombre</span><span style="color:#D4D4D4">) {</span></span>
+<span class="line"><span style="color:#9CDCFE">            console</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">log</span><span style="color:#D4D4D4">(</span><span style="color:#CE9178">`Creando la playlist: </span><span style="color:#569CD6">${</span><span style="color:#9CDCFE">nombre</span><span style="color:#569CD6">}</span><span style="color:#CE9178">`</span><span style="color:#D4D4D4">);</span></span>
+<span class="line"><span style="color:#D4D4D4">        },</span></span>
+<span class="line"><span style="color:#D4D4D4">       </span></span>
+<span class="line"><span style="color:#DCDCAA">        reproducirPlaylist</span><span style="color:#9CDCFE">:</span><span style="color:#569CD6"> function</span><span style="color:#D4D4D4"> (</span><span style="color:#9CDCFE">nombre</span><span style="color:#D4D4D4">) {</span></span>
+<span class="line"><span style="color:#9CDCFE">            console</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">log</span><span style="color:#D4D4D4">(</span><span style="color:#CE9178">`Reproduciendo la playlist: </span><span style="color:#569CD6">${</span><span style="color:#9CDCFE">nombre</span><span style="color:#569CD6">}</span><span style="color:#CE9178">`</span><span style="color:#D4D4D4">);</span></span>
+<span class="line"><span style="color:#D4D4D4">        }</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#D4D4D4">    };</span></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"><span style="color:#9CDCFE">    console</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">log</span><span style="color:#D4D4D4">(</span><span style="color:#CE9178">'-----  Reproductor de música  -----</span><span style="color:#D7BA7D">\n</span><span style="color:#CE9178">'</span><span style="color:#D4D4D4">, {</span><span style="color:#9CDCFE">reproductor</span><span style="color:#D4D4D4">});</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#D4D4D4">    </span></span>
+<span class="line"><span style="color:#6A9955">    //@ts-ignore</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A9955">    //  -----  Agregando un nuevo método al reproductor  -----</span></span>
+<span class="line"><span style="color:#9CDCFE">    reproductor</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">borrarCancion</span><span style="color:#D4D4D4"> = </span><span style="color:#569CD6">function</span><span style="color:#D4D4D4"> (</span><span style="color:#9CDCFE">id</span><span style="color:#D4D4D4">) {</span></span>
+<span class="line"><span style="color:#9CDCFE">        console</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">log</span><span style="color:#D4D4D4">(</span><span style="color:#CE9178">`Eliminando la canción: </span><span style="color:#569CD6">${</span><span style="color:#9CDCFE">id</span><span style="color:#569CD6">}</span><span style="color:#CE9178">`</span><span style="color:#D4D4D4">);</span></span>
+<span class="line"><span style="color:#D4D4D4">    };</span></span>
+<span class="line"><span style="color:#D4D4D4">    </span></span>
+<span class="line"><span style="color:#D4D4D4">    </span></span>
+<span class="line"><span style="color:#6A9955">    //  -----  Ejecución de métodos del reproductor  -----</span></span>
+<span class="line"><span style="color:#9CDCFE">    console</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">log</span><span style="color:#D4D4D4">(</span><span style="color:#CE9178">'</span><span style="color:#D7BA7D">\n</span><span style="color:#CE9178">-----  Ejecutando métodos del reproductor  -----'</span><span style="color:#D4D4D4">);</span></span>
+<span class="line"><span style="color:#9CDCFE">    console</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">log</span><span style="color:#D4D4D4">(</span><span style="color:#CE9178">'</span><span style="color:#D7BA7D">\n</span><span style="color:#CE9178">'</span><span style="color:#D4D4D4">);</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#9CDCFE">    reproductor</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">reproducir</span><span style="color:#D4D4D4">(</span><span style="color:#B5CEA8">3840</span><span style="color:#D4D4D4">);</span></span>
+<span class="line"><span style="color:#9CDCFE">    reproductor</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">pausar</span><span style="color:#D4D4D4">();</span></span>
+<span class="line"><span style="color:#D4D4D4">    </span></span>
+<span class="line"><span style="color:#6A9955">    // @ts-ignore</span></span>
+<span class="line"><span style="color:#9CDCFE">    reproductor</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">borrarCancion</span><span style="color:#D4D4D4">(</span><span style="color:#B5CEA8">20</span><span style="color:#D4D4D4">);</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#9CDCFE">    reproductor</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">crearPlaylist</span><span style="color:#D4D4D4">(</span><span style="color:#CE9178">'Heavy Metal'</span><span style="color:#D4D4D4">);</span></span>
+<span class="line"><span style="color:#9CDCFE">    reproductor</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">reproducirPlaylist</span><span style="color:#D4D4D4">(</span><span style="color:#CE9178">'Heavy Metal'</span><span style="color:#D4D4D4">);</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#D4D4D4">    </span></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"><span style="color:#D4D4D4">})();</span></span>
+<span class="line"></span></code></pre>

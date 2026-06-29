@@ -1,0 +1,59 @@
+<pre class="shiki dark-plus" style="background-color:#1E1E1E;color:#D4D4D4" tabindex="0"><code><span class="line"><span style="color:#D4D4D4">(() </span><span style="color:#569CD6">=></span><span style="color:#D4D4D4"> {</span></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"><span style="color:#9CDCFE">    console</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">clear</span><span style="color:#D4D4D4">();</span></span>
+<span class="line"><span style="color:#9CDCFE">    console</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">log</span><span style="color:#D4D4D4">(</span><span style="color:#CE9178">'</span><span style="color:#D7BA7D">\n</span><span style="color:#CE9178">'</span><span style="color:#D4D4D4">);</span></span>
+<span class="line"><span style="color:#9CDCFE">    console</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">warn</span><span style="color:#D4D4D4">(</span><span style="color:#CE9178">'-----  06-objeto-math.js  -----'</span><span style="color:#D4D4D4">);</span></span>
+<span class="line"><span style="color:#9CDCFE">    console</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">log</span><span style="color:#D4D4D4">(</span><span style="color:#CE9178">'</span><span style="color:#D7BA7D">\n</span><span style="color:#CE9178">'</span><span style="color:#D4D4D4">);</span></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A9955">    // -----  Declaración de variables  -----</span></span>
+<span class="line"><span style="color:#569CD6">    let</span><span style="color:#9CDCFE"> resultado</span><span style="color:#D4D4D4"> = </span><span style="color:#B5CEA8">0</span><span style="color:#D4D4D4">;</span></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A9955">    // -----  El objeto Math es un objeto global que tiene propiedades </span></span>
+<span class="line"><span style="color:#6A9955">    // -----  y métodos para constantes y funciones matemáticas. </span></span>
+<span class="line"><span style="color:#6A9955">    // -----  No es un constructor, por lo que no se puede instanciar.</span></span>
+<span class="line"><span style="color:#9CDCFE">    resultado</span><span style="color:#D4D4D4"> = </span><span style="color:#9CDCFE">Math</span><span style="color:#D4D4D4">.</span><span style="color:#4FC1FF">PI</span><span style="color:#D4D4D4">;</span></span>
+<span class="line"><span style="color:#9CDCFE">    console</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">log</span><span style="color:#D4D4D4">(</span><span style="color:#CE9178">'Math.PI => '</span><span style="color:#D4D4D4">, </span><span style="color:#9CDCFE">resultado</span><span style="color:#D4D4D4">);</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A9955">    // -----  Redondeo de números  -----</span></span>
+<span class="line"><span style="color:#9CDCFE">    resultado</span><span style="color:#D4D4D4"> = </span><span style="color:#9CDCFE">Math</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">round</span><span style="color:#D4D4D4">(</span><span style="color:#B5CEA8">2.5</span><span style="color:#D4D4D4">);</span></span>
+<span class="line"><span style="color:#9CDCFE">    console</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">log</span><span style="color:#D4D4D4">(</span><span style="color:#CE9178">'Math.round(2.5) => '</span><span style="color:#D4D4D4">, </span><span style="color:#9CDCFE">resultado</span><span style="color:#D4D4D4">);</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A9955">    // -----  Redondeo hacia arriba  -----</span></span>
+<span class="line"><span style="color:#9CDCFE">    resultado</span><span style="color:#D4D4D4"> = </span><span style="color:#9CDCFE">Math</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">ceil</span><span style="color:#D4D4D4">(</span><span style="color:#B5CEA8">2.1</span><span style="color:#D4D4D4">); </span><span style="color:#6A9955">// Ceil siempre redondea hacia arriba</span></span>
+<span class="line"><span style="color:#9CDCFE">    console</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">log</span><span style="color:#D4D4D4">(</span><span style="color:#CE9178">'Math.ceil(2.1) => '</span><span style="color:#D4D4D4">, </span><span style="color:#9CDCFE">resultado</span><span style="color:#D4D4D4">);</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A9955">    // -----  Redondeo hacia abajo  -----</span></span>
+<span class="line"><span style="color:#9CDCFE">    resultado</span><span style="color:#D4D4D4"> = </span><span style="color:#9CDCFE">Math</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">floor</span><span style="color:#D4D4D4">(</span><span style="color:#B5CEA8">2.9</span><span style="color:#D4D4D4">);</span></span>
+<span class="line"><span style="color:#9CDCFE">    console</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">log</span><span style="color:#D4D4D4">(</span><span style="color:#CE9178">'Math.floor(2.9) => '</span><span style="color:#D4D4D4">, </span><span style="color:#9CDCFE">resultado</span><span style="color:#D4D4D4">);</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A9955">    // -----  Raíz cuadrada  -----</span></span>
+<span class="line"><span style="color:#9CDCFE">    resultado</span><span style="color:#D4D4D4"> = </span><span style="color:#9CDCFE">Math</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">sqrt</span><span style="color:#D4D4D4">(</span><span style="color:#B5CEA8">144</span><span style="color:#D4D4D4">);</span></span>
+<span class="line"><span style="color:#9CDCFE">    console</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">log</span><span style="color:#D4D4D4">(</span><span style="color:#CE9178">'Math.sqrt(144) => '</span><span style="color:#D4D4D4">, </span><span style="color:#9CDCFE">resultado</span><span style="color:#D4D4D4">);</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A9955">    // -----  Valor absoluto  -----</span></span>
+<span class="line"><span style="color:#9CDCFE">    resultado</span><span style="color:#D4D4D4"> = </span><span style="color:#9CDCFE">Math</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">abs</span><span style="color:#D4D4D4">(-</span><span style="color:#B5CEA8">200</span><span style="color:#D4D4D4">);</span></span>
+<span class="line"><span style="color:#9CDCFE">    console</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">log</span><span style="color:#D4D4D4">(</span><span style="color:#CE9178">'Math.abs(-200) => '</span><span style="color:#D4D4D4">, </span><span style="color:#9CDCFE">resultado</span><span style="color:#D4D4D4">);</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A9955">    // -----  Mínimo valor  -----</span></span>
+<span class="line"><span style="color:#9CDCFE">    resultado</span><span style="color:#D4D4D4"> = </span><span style="color:#9CDCFE">Math</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">min</span><span style="color:#D4D4D4">(</span><span style="color:#B5CEA8">3</span><span style="color:#D4D4D4">, </span><span style="color:#B5CEA8">5</span><span style="color:#D4D4D4">, </span><span style="color:#B5CEA8">1</span><span style="color:#D4D4D4">, </span><span style="color:#B5CEA8">8</span><span style="color:#D4D4D4">, </span><span style="color:#B5CEA8">2</span><span style="color:#D4D4D4">, </span><span style="color:#B5CEA8">10</span><span style="color:#D4D4D4">);</span></span>
+<span class="line"><span style="color:#9CDCFE">    console</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">log</span><span style="color:#D4D4D4">(</span><span style="color:#CE9178">'Math.min(3, 5, 1, 8, 2, 10) => '</span><span style="color:#D4D4D4">, </span><span style="color:#9CDCFE">resultado</span><span style="color:#D4D4D4">);</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A9955">    // -----  Máximo valor  -----</span></span>
+<span class="line"><span style="color:#9CDCFE">    resultado</span><span style="color:#D4D4D4"> = </span><span style="color:#9CDCFE">Math</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">max</span><span style="color:#D4D4D4">(</span><span style="color:#B5CEA8">3</span><span style="color:#D4D4D4">, </span><span style="color:#B5CEA8">5</span><span style="color:#D4D4D4">, </span><span style="color:#B5CEA8">1</span><span style="color:#D4D4D4">, </span><span style="color:#B5CEA8">8</span><span style="color:#D4D4D4">, </span><span style="color:#B5CEA8">2</span><span style="color:#D4D4D4">, </span><span style="color:#B5CEA8">10</span><span style="color:#D4D4D4">);</span></span>
+<span class="line"><span style="color:#9CDCFE">    console</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">log</span><span style="color:#D4D4D4">(</span><span style="color:#CE9178">'Math.max(3, 5, 1, 8, 2, 10) => '</span><span style="color:#D4D4D4">, </span><span style="color:#9CDCFE">resultado</span><span style="color:#D4D4D4">);</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A9955">    // -----  Número aleatorio  -----</span></span>
+<span class="line"><span style="color:#9CDCFE">    resultado</span><span style="color:#D4D4D4"> = </span><span style="color:#9CDCFE">Math</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">random</span><span style="color:#D4D4D4">();</span></span>
+<span class="line"><span style="color:#9CDCFE">    console</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">log</span><span style="color:#D4D4D4">(</span><span style="color:#CE9178">'Math.random() => '</span><span style="color:#D4D4D4">, </span><span style="color:#9CDCFE">resultado</span><span style="color:#D4D4D4">);</span></span>
+<span class="line"><span style="color:#D4D4D4">    </span></span>
+<span class="line"><span style="color:#6A9955">    // -----  Número aleatorio entre 0 y 29  -----</span></span>
+<span class="line"><span style="color:#9CDCFE">    resultado</span><span style="color:#D4D4D4"> = </span><span style="color:#9CDCFE">Math</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">floor</span><span style="color:#D4D4D4">(</span><span style="color:#9CDCFE">Math</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">random</span><span style="color:#D4D4D4">() * </span><span style="color:#B5CEA8">30</span><span style="color:#D4D4D4">);</span></span>
+<span class="line"><span style="color:#9CDCFE">    console</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">log</span><span style="color:#D4D4D4">(</span><span style="color:#CE9178">'Math.floor(Math.random() * 30) => '</span><span style="color:#D4D4D4">, </span><span style="color:#9CDCFE">resultado</span><span style="color:#D4D4D4">);</span></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"><span style="color:#D4D4D4">})();</span></span>
+<span class="line"></span>
+<span class="line"></span></code></pre>

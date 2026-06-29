@@ -1,0 +1,78 @@
+<pre class="shiki dark-plus" style="background-color:#1E1E1E;color:#D4D4D4" tabindex="0"><code><span class="line"><span style="color:#D4D4D4">(() </span><span style="color:#569CD6">=></span><span style="color:#D4D4D4"> {</span></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"><span style="color:#9CDCFE">    console</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">clear</span><span style="color:#D4D4D4">();</span></span>
+<span class="line"><span style="color:#9CDCFE">    console</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">log</span><span style="color:#D4D4D4">(</span><span style="color:#CE9178">'</span><span style="color:#D7BA7D">\n</span><span style="color:#CE9178">'</span><span style="color:#D4D4D4">);</span></span>
+<span class="line"><span style="color:#9CDCFE">    console</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">warn</span><span style="color:#D4D4D4">(</span><span style="color:#CE9178">'-----  19-funciones-retorno-valores.js  -----'</span><span style="color:#D4D4D4">);</span></span>
+<span class="line"><span style="color:#9CDCFE">    console</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">log</span><span style="color:#D4D4D4">(</span><span style="color:#CE9178">'</span><span style="color:#D7BA7D">\n</span><span style="color:#CE9178">'</span><span style="color:#D4D4D4">);</span></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A9955">    /**</span></span>
+<span class="line"><span style="color:#6A9955">     * - `sumar` es una función que toma dos números como argumentos y devuelve su suma.</span></span>
+<span class="line"><span style="color:#6A9955">     * </span><span style="color:#569CD6">@param</span><span style="color:#4EC9B0"> {number}</span><span style="color:#9CDCFE"> n1</span><span style="color:#6A9955"> - El primer número que se va a sumar.</span></span>
+<span class="line"><span style="color:#6A9955">     * </span><span style="color:#569CD6">@param</span><span style="color:#4EC9B0"> {number}</span><span style="color:#9CDCFE"> n2</span><span style="color:#6A9955"> - El segundo número que se va a sumar.</span></span>
+<span class="line"><span style="color:#6A9955">     * </span><span style="color:#569CD6">@returns</span><span style="color:#4EC9B0"> {number}</span></span>
+<span class="line"><span style="color:#6A9955">     */</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#569CD6">    function</span><span style="color:#DCDCAA"> sumar</span><span style="color:#D4D4D4">(</span><span style="color:#9CDCFE">n1</span><span style="color:#D4D4D4">, </span><span style="color:#9CDCFE">n2</span><span style="color:#D4D4D4">) {</span></span>
+<span class="line"><span style="color:#C586C0">        return</span><span style="color:#9CDCFE"> n1</span><span style="color:#D4D4D4"> + </span><span style="color:#9CDCFE">n2</span><span style="color:#D4D4D4">;</span></span>
+<span class="line"><span style="color:#D4D4D4">    }</span></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A9955">    /** - almacena el resultado de la suma de 2 y 3 */</span></span>
+<span class="line"><span style="color:#569CD6">    const</span><span style="color:#4FC1FF"> resultado</span><span style="color:#D4D4D4"> = </span><span style="color:#DCDCAA">sumar</span><span style="color:#D4D4D4">(</span><span style="color:#B5CEA8">2</span><span style="color:#D4D4D4">, </span><span style="color:#B5CEA8">3</span><span style="color:#D4D4D4">);</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#9CDCFE">    console</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">log</span><span style="color:#D4D4D4">(</span><span style="color:#CE9178">'</span><span style="color:#D7BA7D">\n</span><span style="color:#CE9178">sumar(2, 3) => '</span><span style="color:#D4D4D4">, </span><span style="color:#9CDCFE">resultado</span><span style="color:#D4D4D4">);</span></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A9955">    /*  </span></span>
+<span class="line"><span style="color:#6A9955">        -------------------------------------------------------------------------------------------</span></span>
+<span class="line"><span style="color:#6A9955">        -----  Ejemplo práctico: Funciones con retorno de valores para un carrito de compras  -----</span></span>
+<span class="line"><span style="color:#6A9955">        ------------------------------------------------------------------------------------------- </span></span>
+<span class="line"><span style="color:#6A9955">    */</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A9955">    /** - Variable para almacenar el total acumulado en el carrito */</span><span style="color:#D4D4D4">  </span></span>
+<span class="line"><span style="color:#569CD6">    let</span><span style="color:#9CDCFE"> total</span><span style="color:#D4D4D4"> = </span><span style="color:#B5CEA8">0</span><span style="color:#D4D4D4">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A9955">    /** - Variable para almacenar el porcentaje de impuesto */</span><span style="color:#D4D4D4">  </span></span>
+<span class="line"><span style="color:#569CD6">    let</span><span style="color:#9CDCFE"> impuesto</span><span style="color:#D4D4D4"> = </span><span style="color:#B5CEA8">0.21</span><span style="color:#D4D4D4">; </span><span style="color:#6A9955">// 15% de impuesto</span></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A9955">    /**</span></span>
+<span class="line"><span style="color:#6A9955">     * - `agregarCarrito` es una función que toma un número como argumento y devuelve el total actualizado después de agregar el precio al carrito.</span></span>
+<span class="line"><span style="color:#6A9955">     * </span><span style="color:#569CD6">@param</span><span style="color:#4EC9B0"> {number}</span><span style="color:#9CDCFE"> precio</span><span style="color:#6A9955"> - El precio del artículo que se va a agregar al carrito. </span></span>
+<span class="line"><span style="color:#6A9955">     * </span><span style="color:#569CD6">@returns</span><span style="color:#4EC9B0"> {number}</span><span style="color:#6A9955"> - El total actualizado después de agregar el precio al carrito.</span></span>
+<span class="line"><span style="color:#6A9955">     */</span></span>
+<span class="line"><span style="color:#D4D4D4">    </span></span>
+<span class="line"><span style="color:#569CD6">    function</span><span style="color:#DCDCAA"> agregarCarrito</span><span style="color:#D4D4D4">(</span><span style="color:#9CDCFE">precio</span><span style="color:#D4D4D4">) {</span></span>
+<span class="line"><span style="color:#C586C0">        return</span><span style="color:#9CDCFE"> total</span><span style="color:#D4D4D4"> += </span><span style="color:#9CDCFE">precio</span><span style="color:#D4D4D4">;</span></span>
+<span class="line"><span style="color:#D4D4D4">    }</span></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A9955">    /**</span></span>
+<span class="line"><span style="color:#6A9955">     * - `calcularImpuesto` es una función que toma un número como argumento y devuelve el total después de aplicar un impuesto del 15%.</span></span>
+<span class="line"><span style="color:#6A9955">     * </span><span style="color:#569CD6">@param</span><span style="color:#4EC9B0"> {number}</span><span style="color:#9CDCFE"> total</span><span style="color:#6A9955"> - El total acumulado antes de calcular el impuesto.</span></span>
+<span class="line"><span style="color:#6A9955">     * </span><span style="color:#569CD6">@returns</span><span style="color:#4EC9B0"> {number}</span><span style="color:#6A9955"> - El total después de aplicar el impuesto.</span></span>
+<span class="line"><span style="color:#6A9955">     */</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#569CD6">    function</span><span style="color:#DCDCAA"> calcularImpuesto</span><span style="color:#D4D4D4">(</span><span style="color:#9CDCFE">total</span><span style="color:#D4D4D4">, </span><span style="color:#9CDCFE">impuesto</span><span style="color:#D4D4D4"> = </span><span style="color:#B5CEA8">0.15</span><span style="color:#D4D4D4">) {</span></span>
+<span class="line"><span style="color:#C586C0">        return</span><span style="color:#D4D4D4"> (</span><span style="color:#B5CEA8">1</span><span style="color:#D4D4D4"> + </span><span style="color:#9CDCFE">impuesto</span><span style="color:#D4D4D4">) * </span><span style="color:#9CDCFE">total</span><span style="color:#D4D4D4">;</span></span>
+<span class="line"><span style="color:#D4D4D4">    }</span></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A9955">    //  -----  Agregar precios al carrito y calcular el total  -----</span></span>
+<span class="line"><span style="color:#9CDCFE">    total</span><span style="color:#D4D4D4"> = </span><span style="color:#DCDCAA">agregarCarrito</span><span style="color:#D4D4D4">(</span><span style="color:#B5CEA8">200</span><span style="color:#D4D4D4">);</span></span>
+<span class="line"><span style="color:#9CDCFE">    total</span><span style="color:#D4D4D4"> = </span><span style="color:#DCDCAA">agregarCarrito</span><span style="color:#D4D4D4">(</span><span style="color:#B5CEA8">400</span><span style="color:#D4D4D4">);</span></span>
+<span class="line"><span style="color:#9CDCFE">    total</span><span style="color:#D4D4D4"> = </span><span style="color:#DCDCAA">agregarCarrito</span><span style="color:#D4D4D4">(</span><span style="color:#B5CEA8">600</span><span style="color:#D4D4D4">);</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#9CDCFE">    console</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">log</span><span style="color:#D4D4D4">(</span><span style="color:#CE9178">'</span><span style="color:#D7BA7D">\n</span><span style="color:#CE9178">'</span><span style="color:#D4D4D4">, {</span><span style="color:#9CDCFE">total</span><span style="color:#D4D4D4">});</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A9955">    /** - almacena el total a pagar después de calcular el impuesto */</span></span>
+<span class="line"><span style="color:#569CD6">    const</span><span style="color:#4FC1FF"> totalAPagar</span><span style="color:#D4D4D4"> = </span><span style="color:#DCDCAA">calcularImpuesto</span><span style="color:#D4D4D4">(</span><span style="color:#9CDCFE">total</span><span style="color:#D4D4D4">, </span><span style="color:#9CDCFE">impuesto</span><span style="color:#D4D4D4">);</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#9CDCFE">    console</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">log</span><span style="color:#D4D4D4">(</span><span style="color:#CE9178">`</span><span style="color:#D7BA7D">\n</span><span style="color:#CE9178">El total a pagar de $</span><span style="color:#569CD6">${</span><span style="color:#9CDCFE">total</span><span style="color:#569CD6">}</span><span style="color:#CE9178"> con impuesto del </span><span style="color:#569CD6">${</span><span style="color:#9CDCFE">impuesto</span><span style="color:#D4D4D4"> * </span><span style="color:#B5CEA8">100</span><span style="color:#569CD6">}</span><span style="color:#CE9178">% es de: $</span><span style="color:#569CD6">${</span><span style="color:#9CDCFE">totalAPagar</span><span style="color:#569CD6">}</span><span style="color:#CE9178">`</span><span style="color:#D4D4D4">);</span></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"><span style="color:#D4D4D4">})();</span></span>
+<span class="line"></span></code></pre>

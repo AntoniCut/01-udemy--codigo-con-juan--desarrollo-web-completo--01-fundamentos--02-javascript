@@ -1,0 +1,45 @@
+<pre class="shiki dark-plus" style="background-color:#1E1E1E;color:#D4D4D4" tabindex="0"><code><span class="line"><span style="color:#D4D4D4">(() </span><span style="color:#569CD6">=></span><span style="color:#D4D4D4"> {</span></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"><span style="color:#9CDCFE">    console</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">clear</span><span style="color:#D4D4D4">();</span></span>
+<span class="line"><span style="color:#9CDCFE">    console</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">log</span><span style="color:#D4D4D4">(</span><span style="color:#CE9178">'</span><span style="color:#D7BA7D">\n</span><span style="color:#CE9178">'</span><span style="color:#D4D4D4">);</span></span>
+<span class="line"><span style="color:#9CDCFE">    console</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">warn</span><span style="color:#D4D4D4">(</span><span style="color:#CE9178">'-----  26-this.js  -----'</span><span style="color:#D4D4D4">);</span></span>
+<span class="line"><span style="color:#9CDCFE">    console</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">log</span><span style="color:#D4D4D4">(</span><span style="color:#CE9178">'</span><span style="color:#D7BA7D">\n</span><span style="color:#CE9178">'</span><span style="color:#D4D4D4">);</span></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A9955">    /*  -----  this  ----- </span></span>
+<span class="line"><span style="color:#6A9955">        - El objeto this hace referencia al objeto padre, es decir, al objeto que lo contiene, </span></span>
+<span class="line"><span style="color:#6A9955">          en este caso los objetos reservacion1 y reservacion2, por lo tanto:</span></span>
+<span class="line"><span style="color:#6A9955">          - this.nombre hace referencia a reservacion1.nombre,  y this.total hace referencia a reservacion1.total</span></span>
+<span class="line"><span style="color:#6A9955">          - this.nombre hace referencia a reservacion2.nombre,  y this.total hace referencia a reservacion2.total</span></span>
+<span class="line"><span style="color:#6A9955">    */</span></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"><span style="color:#569CD6">    const</span><span style="color:#4FC1FF"> reservacion1</span><span style="color:#D4D4D4"> = {</span></span>
+<span class="line"><span style="color:#9CDCFE">        nombre:</span><span style="color:#CE9178"> 'Juan'</span><span style="color:#D4D4D4">,</span></span>
+<span class="line"><span style="color:#9CDCFE">        apellido:</span><span style="color:#CE9178"> 'De la torre'</span><span style="color:#D4D4D4">,</span></span>
+<span class="line"><span style="color:#9CDCFE">        total:</span><span style="color:#B5CEA8"> 5000</span><span style="color:#D4D4D4">,</span></span>
+<span class="line"><span style="color:#9CDCFE">        pagado:</span><span style="color:#569CD6"> false</span><span style="color:#D4D4D4">,</span></span>
+<span class="line"><span style="color:#DCDCAA">        informacion</span><span style="color:#9CDCFE">:</span><span style="color:#569CD6"> function</span><span style="color:#D4D4D4"> () {</span></span>
+<span class="line"><span style="color:#9CDCFE">            console</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">log</span><span style="color:#D4D4D4">(</span><span style="color:#CE9178">`El Cliente </span><span style="color:#569CD6">${</span><span style="color:#569CD6">this</span><span style="color:#D4D4D4">.</span><span style="color:#9CDCFE">nombre</span><span style="color:#569CD6">}</span><span style="color:#CE9178"> reservó y su cantidad a pagar es de </span><span style="color:#569CD6">${</span><span style="color:#569CD6">this</span><span style="color:#D4D4D4">.</span><span style="color:#9CDCFE">total</span><span style="color:#569CD6">}</span><span style="color:#CE9178">`</span><span style="color:#D4D4D4">);</span></span>
+<span class="line"><span style="color:#D4D4D4">        }</span></span>
+<span class="line"><span style="color:#D4D4D4">    }</span></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"><span style="color:#569CD6">    const</span><span style="color:#4FC1FF"> reservacion2</span><span style="color:#D4D4D4"> = {</span></span>
+<span class="line"><span style="color:#9CDCFE">        nombre:</span><span style="color:#CE9178"> 'Pedro'</span><span style="color:#D4D4D4">,</span></span>
+<span class="line"><span style="color:#9CDCFE">        apellido:</span><span style="color:#CE9178"> 'De la torre'</span><span style="color:#D4D4D4">,</span></span>
+<span class="line"><span style="color:#9CDCFE">        total:</span><span style="color:#B5CEA8"> 3000</span><span style="color:#D4D4D4">,</span></span>
+<span class="line"><span style="color:#9CDCFE">        pagado:</span><span style="color:#569CD6"> false</span><span style="color:#D4D4D4">,</span></span>
+<span class="line"><span style="color:#DCDCAA">        informacion</span><span style="color:#9CDCFE">:</span><span style="color:#569CD6"> function</span><span style="color:#D4D4D4"> () {</span></span>
+<span class="line"><span style="color:#9CDCFE">            console</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">log</span><span style="color:#D4D4D4">(</span><span style="color:#CE9178">`El Cliente </span><span style="color:#569CD6">${</span><span style="color:#569CD6">this</span><span style="color:#D4D4D4">.</span><span style="color:#9CDCFE">nombre</span><span style="color:#569CD6">}</span><span style="color:#CE9178"> reservó y su cantidad a pagar es de </span><span style="color:#569CD6">${</span><span style="color:#569CD6">this</span><span style="color:#D4D4D4">.</span><span style="color:#9CDCFE">total</span><span style="color:#569CD6">}</span><span style="color:#CE9178">`</span><span style="color:#D4D4D4">);</span></span>
+<span class="line"><span style="color:#D4D4D4">        }</span></span>
+<span class="line"><span style="color:#D4D4D4">    }</span></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"><span style="color:#9CDCFE">    reservacion1</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">informacion</span><span style="color:#D4D4D4">();</span></span>
+<span class="line"><span style="color:#9CDCFE">    reservacion2</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">informacion</span><span style="color:#D4D4D4">();</span></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"><span style="color:#D4D4D4">})();</span></span>
+<span class="line"></span></code></pre>

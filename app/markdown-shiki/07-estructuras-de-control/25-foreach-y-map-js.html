@@ -1,0 +1,80 @@
+<pre class="shiki dark-plus" style="background-color:#1E1E1E;color:#D4D4D4" tabindex="0"><code><span class="line"><span style="color:#D4D4D4">(() </span><span style="color:#569CD6">=></span><span style="color:#D4D4D4"> {</span></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"><span style="color:#9CDCFE">    console</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">clear</span><span style="color:#D4D4D4">();</span></span>
+<span class="line"><span style="color:#9CDCFE">    console</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">log</span><span style="color:#D4D4D4">(</span><span style="color:#CE9178">'</span><span style="color:#D7BA7D">\n</span><span style="color:#CE9178">'</span><span style="color:#D4D4D4">);</span></span>
+<span class="line"><span style="color:#9CDCFE">    console</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">warn</span><span style="color:#D4D4D4">(</span><span style="color:#CE9178">'-----  25-foreach-y-map.js  -----'</span><span style="color:#D4D4D4">);</span></span>
+<span class="line"><span style="color:#9CDCFE">    console</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">log</span><span style="color:#D4D4D4">(</span><span style="color:#CE9178">'</span><span style="color:#D7BA7D">\n</span><span style="color:#CE9178">'</span><span style="color:#D4D4D4">);</span></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"><span style="color:#569CD6">    const</span><span style="color:#4FC1FF"> carrito</span><span style="color:#D4D4D4"> = [</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#D4D4D4">        {</span></span>
+<span class="line"><span style="color:#9CDCFE">            nombre:</span><span style="color:#CE9178"> 'Monitor 20 Pulgadas'</span><span style="color:#D4D4D4">,</span></span>
+<span class="line"><span style="color:#9CDCFE">            precio:</span><span style="color:#B5CEA8"> 500</span></span>
+<span class="line"><span style="color:#D4D4D4">        },</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#D4D4D4">        {</span></span>
+<span class="line"><span style="color:#9CDCFE">            nombre:</span><span style="color:#CE9178"> 'Televisión 50 Pulgadas'</span><span style="color:#D4D4D4">,</span></span>
+<span class="line"><span style="color:#9CDCFE">            precio:</span><span style="color:#B5CEA8"> 700</span></span>
+<span class="line"><span style="color:#D4D4D4">        },</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#D4D4D4">        {</span></span>
+<span class="line"><span style="color:#9CDCFE">            nombre:</span><span style="color:#CE9178"> 'Tablet'</span><span style="color:#D4D4D4">,</span></span>
+<span class="line"><span style="color:#9CDCFE">            precio:</span><span style="color:#B5CEA8"> 300</span></span>
+<span class="line"><span style="color:#D4D4D4">        },</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#D4D4D4">        {</span></span>
+<span class="line"><span style="color:#9CDCFE">            nombre:</span><span style="color:#CE9178"> 'Audifonos'</span><span style="color:#D4D4D4">,</span></span>
+<span class="line"><span style="color:#9CDCFE">            precio:</span><span style="color:#B5CEA8"> 200</span></span>
+<span class="line"><span style="color:#D4D4D4">        },</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#D4D4D4">        {</span></span>
+<span class="line"><span style="color:#9CDCFE">            nombre:</span><span style="color:#CE9178"> 'Teclado'</span><span style="color:#D4D4D4">,</span></span>
+<span class="line"><span style="color:#9CDCFE">            precio:</span><span style="color:#B5CEA8"> 50</span></span>
+<span class="line"><span style="color:#D4D4D4">        },</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#D4D4D4">        {</span></span>
+<span class="line"><span style="color:#9CDCFE">            nombre:</span><span style="color:#CE9178"> 'Celular'</span><span style="color:#D4D4D4">,</span></span>
+<span class="line"><span style="color:#9CDCFE">            precio:</span><span style="color:#B5CEA8"> 500</span></span>
+<span class="line"><span style="color:#D4D4D4">        },</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#D4D4D4">        {</span></span>
+<span class="line"><span style="color:#9CDCFE">            nombre:</span><span style="color:#CE9178"> 'Bocinas'</span><span style="color:#D4D4D4">,</span></span>
+<span class="line"><span style="color:#9CDCFE">            precio:</span><span style="color:#B5CEA8"> 300</span></span>
+<span class="line"><span style="color:#D4D4D4">        },</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#D4D4D4">        {</span></span>
+<span class="line"><span style="color:#9CDCFE">            nombre:</span><span style="color:#CE9178"> 'Laptop'</span><span style="color:#D4D4D4">,</span></span>
+<span class="line"><span style="color:#9CDCFE">            precio:</span><span style="color:#B5CEA8"> 800</span></span>
+<span class="line"><span style="color:#D4D4D4">        }</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#D4D4D4">    ];</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#9CDCFE">    console</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">log</span><span style="color:#D4D4D4">(</span><span style="color:#CE9178">'</span><span style="color:#D7BA7D">\n</span><span style="color:#CE9178">El carrito de compras es... </span><span style="color:#D7BA7D">\n</span><span style="color:#CE9178">'</span><span style="color:#D4D4D4">);</span></span>
+<span class="line"><span style="color:#9CDCFE">    console</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">table</span><span style="color:#D4D4D4">(</span><span style="color:#9CDCFE">carrito</span><span style="color:#D4D4D4">);</span></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A9955">    /*  </span></span>
+<span class="line"><span style="color:#6A9955">        -----  ForEach  -----</span></span>
+<span class="line"><span style="color:#6A9955">        - El método forEach() ejecuta la función indicada una vez por cada elemento del array.</span></span>
+<span class="line"><span style="color:#6A9955">    */</span></span>
+<span class="line"><span style="color:#9CDCFE">    console</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">log</span><span style="color:#D4D4D4">(</span><span style="color:#CE9178">'</span><span style="color:#D7BA7D">\n</span><span style="color:#CE9178">Recorriendo el carrito con ForEach... </span><span style="color:#D7BA7D">\n\n</span><span style="color:#CE9178">'</span><span style="color:#D4D4D4">);</span></span>
+<span class="line"><span style="color:#9CDCFE">    carrito</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">forEach</span><span style="color:#D4D4D4">(</span><span style="color:#9CDCFE">producto</span><span style="color:#569CD6"> =></span><span style="color:#9CDCFE"> console</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">table</span><span style="color:#D4D4D4">(</span><span style="color:#CE9178">`Nombre: </span><span style="color:#569CD6">${</span><span style="color:#9CDCFE">producto</span><span style="color:#D4D4D4">.</span><span style="color:#9CDCFE">nombre</span><span style="color:#569CD6">}</span><span style="color:#CE9178"> - Precio: </span><span style="color:#569CD6">${</span><span style="color:#9CDCFE">producto</span><span style="color:#D4D4D4">.</span><span style="color:#9CDCFE">precio</span><span style="color:#569CD6">}</span><span style="color:#CE9178">`</span><span style="color:#D4D4D4">));</span></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A9955">    /*  </span></span>
+<span class="line"><span style="color:#6A9955">        -----  map  -----</span></span>
+<span class="line"><span style="color:#6A9955">        - El método map() crea un nuevo array con los resultados de la llamada a la función indicada aplicada a cada elemento del array.</span></span>
+<span class="line"><span style="color:#6A9955">    */</span></span>
+<span class="line"><span style="color:#9CDCFE">    console</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">log</span><span style="color:#D4D4D4">(</span><span style="color:#CE9178">'</span><span style="color:#D7BA7D">\n</span><span style="color:#CE9178">Recorriendo el carrito con map... </span><span style="color:#D7BA7D">\n\n</span><span style="color:#CE9178">'</span><span style="color:#D4D4D4">);</span></span>
+<span class="line"><span style="color:#569CD6">    const</span><span style="color:#4FC1FF"> arreglo2</span><span style="color:#D4D4D4"> = </span><span style="color:#9CDCFE">carrito</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">map</span><span style="color:#D4D4D4">(</span><span style="color:#9CDCFE">producto</span><span style="color:#569CD6"> =></span><span style="color:#CE9178"> `Nombre: </span><span style="color:#569CD6">${</span><span style="color:#9CDCFE">producto</span><span style="color:#D4D4D4">.</span><span style="color:#9CDCFE">nombre</span><span style="color:#569CD6">}</span><span style="color:#CE9178"> - Precio: </span><span style="color:#569CD6">${</span><span style="color:#9CDCFE">producto</span><span style="color:#D4D4D4">.</span><span style="color:#9CDCFE">precio</span><span style="color:#569CD6">}</span><span style="color:#CE9178">`</span><span style="color:#D4D4D4">);</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#9CDCFE">    console</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">table</span><span style="color:#D4D4D4">(</span><span style="color:#9CDCFE">arreglo2</span><span style="color:#D4D4D4">);</span></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"><span style="color:#D4D4D4">})();</span></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"></span></code></pre>

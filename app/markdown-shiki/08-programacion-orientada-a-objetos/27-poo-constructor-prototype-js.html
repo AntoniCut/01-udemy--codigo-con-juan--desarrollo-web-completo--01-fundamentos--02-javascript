@@ -1,0 +1,145 @@
+<pre class="shiki dark-plus" style="background-color:#1E1E1E;color:#D4D4D4" tabindex="0"><code><span class="line"><span style="color:#D4D4D4">(() </span><span style="color:#569CD6">=></span><span style="color:#D4D4D4"> {</span></span>
+<span class="line"><span style="color:#D4D4D4">    </span></span>
+<span class="line"><span style="color:#D4D4D4">    </span></span>
+<span class="line"><span style="color:#9CDCFE">    console</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">clear</span><span style="color:#D4D4D4">();</span></span>
+<span class="line"><span style="color:#9CDCFE">    console</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">log</span><span style="color:#D4D4D4">(</span><span style="color:#CE9178">'</span><span style="color:#D7BA7D">\n</span><span style="color:#CE9178">'</span><span style="color:#D4D4D4">);</span></span>
+<span class="line"><span style="color:#9CDCFE">    console</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">warn</span><span style="color:#D4D4D4">(</span><span style="color:#CE9178">'-----  27-poo-constructor-prototype.js  -----'</span><span style="color:#D4D4D4">);</span></span>
+<span class="line"><span style="color:#9CDCFE">    console</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">log</span><span style="color:#D4D4D4">(</span><span style="color:#CE9178">'</span><span style="color:#D7BA7D">\n</span><span style="color:#CE9178">'</span><span style="color:#D4D4D4">);</span></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A9955">    /*</span></span>
+<span class="line"><span style="color:#6A9955">        ----------------------------</span></span>
+<span class="line"><span style="color:#6A9955">        -----  Objeto Literal  -----</span></span>
+<span class="line"><span style="color:#6A9955">        ----------------------------</span></span>
+<span class="line"><span style="color:#6A9955">    */</span></span>
+<span class="line"><span style="color:#D4D4D4">    </span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A9955">    /** `Object Literal` */</span></span>
+<span class="line"><span style="color:#569CD6">    const</span><span style="color:#4FC1FF"> producto</span><span style="color:#D4D4D4"> = {</span></span>
+<span class="line"><span style="color:#9CDCFE">        nombre:</span><span style="color:#CE9178"> 'Tablet'</span><span style="color:#D4D4D4">,</span></span>
+<span class="line"><span style="color:#9CDCFE">        precio:</span><span style="color:#B5CEA8"> 500</span></span>
+<span class="line"><span style="color:#D4D4D4">    }</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#9CDCFE">    console</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">log</span><span style="color:#D4D4D4">(</span><span style="color:#CE9178">'producto => '</span><span style="color:#D4D4D4">, </span><span style="color:#9CDCFE">producto</span><span style="color:#D4D4D4">);</span></span>
+<span class="line"><span style="color:#D4D4D4">    </span></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A9955">    /*</span></span>
+<span class="line"><span style="color:#6A9955">        ----------------------------------------------------------------</span></span>
+<span class="line"><span style="color:#6A9955">        -----  Cliente  -----  Objetos Constructores y prototipos  -----</span></span>
+<span class="line"><span style="color:#6A9955">        ----------------------------------------------------------------</span></span>
+<span class="line"><span style="color:#6A9955">    */</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#D4D4D4">   </span></span>
+<span class="line"><span style="color:#6A9955">    /**</span></span>
+<span class="line"><span style="color:#6A9955">     * -----------------------------------------</span></span>
+<span class="line"><span style="color:#6A9955">     * -----  `Cliente(nombre, apellido)`  -----</span></span>
+<span class="line"><span style="color:#6A9955">     * -----------------------------------------</span></span>
+<span class="line"><span style="color:#6A9955">     * </span></span>
+<span class="line"><span style="color:#6A9955">     * - Objeto Constructor para crear clientes.</span></span>
+<span class="line"><span style="color:#6A9955">     * - Crea una instancia de Cliente.</span></span>
+<span class="line"><span style="color:#6A9955">     * </span></span>
+<span class="line"><span style="color:#6A9955">     * </span><span style="color:#569CD6">@constructor</span></span>
+<span class="line"><span style="color:#6A9955">     * </span><span style="color:#569CD6">@param</span><span style="color:#4EC9B0"> {string}</span><span style="color:#9CDCFE"> nombre</span><span style="color:#6A9955"> - Nombre del cliente</span></span>
+<span class="line"><span style="color:#6A9955">     * </span><span style="color:#569CD6">@param</span><span style="color:#4EC9B0"> {string}</span><span style="color:#9CDCFE"> apellido</span><span style="color:#6A9955"> - Apellido del cliente</span></span>
+<span class="line"><span style="color:#6A9955">     * </span></span>
+<span class="line"><span style="color:#6A9955">     */</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#569CD6">    function</span><span style="color:#DCDCAA"> Cliente</span><span style="color:#D4D4D4">(</span><span style="color:#9CDCFE">nombre</span><span style="color:#D4D4D4">, </span><span style="color:#9CDCFE">apellido</span><span style="color:#D4D4D4">) {</span></span>
+<span class="line"><span style="color:#569CD6">        this</span><span style="color:#D4D4D4">.</span><span style="color:#9CDCFE">nombre</span><span style="color:#D4D4D4"> = </span><span style="color:#9CDCFE">nombre</span><span style="color:#D4D4D4">;</span></span>
+<span class="line"><span style="color:#569CD6">        this</span><span style="color:#D4D4D4">.</span><span style="color:#9CDCFE">apellido</span><span style="color:#D4D4D4"> = </span><span style="color:#9CDCFE">apellido</span><span style="color:#D4D4D4">;</span></span>
+<span class="line"><span style="color:#D4D4D4">    }</span></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A9955">    /**</span></span>
+<span class="line"><span style="color:#6A9955">     * ----------------------------------</span></span>
+<span class="line"><span style="color:#6A9955">     * -----  `formatearCliente()`  -----</span></span>
+<span class="line"><span style="color:#6A9955">     * ----------------------------------</span></span>
+<span class="line"><span style="color:#6A9955">     * </span></span>
+<span class="line"><span style="color:#6A9955">     * Devuelve un string con la información del cliente.</span></span>
+<span class="line"><span style="color:#6A9955">     *</span></span>
+<span class="line"><span style="color:#6A9955">     * </span><span style="color:#569CD6">@prototype</span></span>
+<span class="line"><span style="color:#6A9955">     * </span><span style="color:#569CD6">@returns</span><span style="color:#4EC9B0"> {string}</span></span>
+<span class="line"><span style="color:#6A9955">     * </span></span>
+<span class="line"><span style="color:#6A9955">     */</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#4EC9B0">    Cliente</span><span style="color:#D4D4D4">.</span><span style="color:#9CDCFE">prototype</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">formatearCliente</span><span style="color:#D4D4D4"> = </span><span style="color:#569CD6">function</span><span style="color:#D4D4D4"> () {</span></span>
+<span class="line"><span style="color:#C586C0">        return</span><span style="color:#CE9178"> `El Cliente </span><span style="color:#569CD6">${</span><span style="color:#569CD6">this</span><span style="color:#D4D4D4">.</span><span style="color:#9CDCFE">nombre</span><span style="color:#569CD6">}</span><span style="color:#569CD6"> ${</span><span style="color:#569CD6">this</span><span style="color:#D4D4D4">.</span><span style="color:#9CDCFE">apellido</span><span style="color:#569CD6">}</span><span style="color:#CE9178">`</span><span style="color:#D4D4D4">;</span></span>
+<span class="line"><span style="color:#D4D4D4">    };</span></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A9955">    /*</span></span>
+<span class="line"><span style="color:#6A9955">        -----------------------------------------------------------------</span></span>
+<span class="line"><span style="color:#6A9955">        -----  Producto  -----  Objetos Constructores y prototipos  -----</span></span>
+<span class="line"><span style="color:#6A9955">        -----------------------------------------------------------------</span></span>
+<span class="line"><span style="color:#6A9955">    */</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#D4D4D4">    </span></span>
+<span class="line"><span style="color:#6A9955">    /**</span></span>
+<span class="line"><span style="color:#6A9955">     * -----------------------------------------</span></span>
+<span class="line"><span style="color:#6A9955">     * -----  `Producto(nombre, precio)`  -----</span></span>
+<span class="line"><span style="color:#6A9955">     * -----------------------------------------</span></span>
+<span class="line"><span style="color:#6A9955">     * </span></span>
+<span class="line"><span style="color:#6A9955">     * - Objeto Constructor para crear productos.</span></span>
+<span class="line"><span style="color:#6A9955">     * - Crea una instancia de Producto.</span></span>
+<span class="line"><span style="color:#6A9955">     * </span></span>
+<span class="line"><span style="color:#6A9955">     * </span><span style="color:#569CD6">@constructor</span></span>
+<span class="line"><span style="color:#6A9955">     * </span><span style="color:#569CD6">@param</span><span style="color:#4EC9B0"> {string}</span><span style="color:#9CDCFE"> nombre</span><span style="color:#6A9955"> - Nombre del producto</span></span>
+<span class="line"><span style="color:#6A9955">     * </span><span style="color:#569CD6">@param</span><span style="color:#4EC9B0"> {number}</span><span style="color:#9CDCFE"> precio</span><span style="color:#6A9955"> - Precio del producto</span></span>
+<span class="line"><span style="color:#6A9955">     * </span></span>
+<span class="line"><span style="color:#6A9955">     */</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#569CD6">    function</span><span style="color:#DCDCAA"> Producto</span><span style="color:#D4D4D4">(</span><span style="color:#9CDCFE">nombre</span><span style="color:#D4D4D4">, </span><span style="color:#9CDCFE">precio</span><span style="color:#D4D4D4">) {</span></span>
+<span class="line"><span style="color:#569CD6">        this</span><span style="color:#D4D4D4">.</span><span style="color:#9CDCFE">nombre</span><span style="color:#D4D4D4"> = </span><span style="color:#9CDCFE">nombre</span><span style="color:#D4D4D4">;</span></span>
+<span class="line"><span style="color:#569CD6">        this</span><span style="color:#D4D4D4">.</span><span style="color:#9CDCFE">precio</span><span style="color:#D4D4D4"> = </span><span style="color:#9CDCFE">precio</span><span style="color:#D4D4D4">;</span></span>
+<span class="line"><span style="color:#D4D4D4">    }</span></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A9955">    /**</span></span>
+<span class="line"><span style="color:#6A9955">     * -----------------------------------</span></span>
+<span class="line"><span style="color:#6A9955">     * -----  `formatearProducto()`  -----</span></span>
+<span class="line"><span style="color:#6A9955">     * -----------------------------------</span></span>
+<span class="line"><span style="color:#6A9955">     * </span></span>
+<span class="line"><span style="color:#6A9955">     * Devuelve un string con la información del producto.</span></span>
+<span class="line"><span style="color:#6A9955">     * </span></span>
+<span class="line"><span style="color:#6A9955">     * </span><span style="color:#569CD6">@prototype</span></span>
+<span class="line"><span style="color:#6A9955">     * </span><span style="color:#569CD6">@returns</span><span style="color:#4EC9B0"> {string}</span></span>
+<span class="line"><span style="color:#6A9955">     * </span></span>
+<span class="line"><span style="color:#6A9955">     */</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#4EC9B0">    Producto</span><span style="color:#D4D4D4">.</span><span style="color:#9CDCFE">prototype</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">formatearProducto</span><span style="color:#D4D4D4"> = </span><span style="color:#569CD6">function</span><span style="color:#D4D4D4"> () {</span></span>
+<span class="line"><span style="color:#C586C0">        return</span><span style="color:#CE9178"> `El Producto </span><span style="color:#569CD6">${</span><span style="color:#569CD6">this</span><span style="color:#D4D4D4">.</span><span style="color:#9CDCFE">nombre</span><span style="color:#569CD6">}</span><span style="color:#CE9178"> tiene un precio de: $</span><span style="color:#569CD6">${</span><span style="color:#569CD6">this</span><span style="color:#D4D4D4">.</span><span style="color:#9CDCFE">precio</span><span style="color:#569CD6">}</span><span style="color:#CE9178">`</span><span style="color:#D4D4D4">;</span></span>
+<span class="line"><span style="color:#D4D4D4">    };</span></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A9955">    /*</span></span>
+<span class="line"><span style="color:#6A9955">        ----------------------------------------------------</span></span>
+<span class="line"><span style="color:#6A9955">        -----  Instancias de clase Producto y Cliente  -----</span></span>
+<span class="line"><span style="color:#6A9955">        ----------------------------------------------------</span></span>
+<span class="line"><span style="color:#6A9955">    */</span></span>
+<span class="line"><span style="color:#D4D4D4">     </span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A9955">    //  -----  Instancia de Producto  -----</span></span>
+<span class="line"><span style="color:#569CD6">    const</span><span style="color:#4FC1FF"> producto1</span><span style="color:#D4D4D4"> = </span><span style="color:#569CD6">new</span><span style="color:#DCDCAA"> Producto</span><span style="color:#D4D4D4">(</span><span style="color:#CE9178">'Monitor Curvo de 49"'</span><span style="color:#D4D4D4">, </span><span style="color:#B5CEA8">800</span><span style="color:#D4D4D4">);</span></span>
+<span class="line"><span style="color:#9CDCFE">    console</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">log</span><span style="color:#D4D4D4">(</span><span style="color:#CE9178">'</span><span style="color:#D7BA7D">\n</span><span style="color:#CE9178">producto1 =>'</span><span style="color:#D4D4D4">, </span><span style="color:#9CDCFE">producto1</span><span style="color:#D4D4D4">);</span></span>
+<span class="line"><span style="color:#9CDCFE">    console</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">log</span><span style="color:#D4D4D4">(</span><span style="color:#CE9178">'producto1.formatearProducto() =>'</span><span style="color:#D4D4D4">, </span><span style="color:#9CDCFE">producto1</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">formatearProducto</span><span style="color:#D4D4D4">());</span></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A9955">    //  -----  Otra instancia de Producto  -----</span></span>
+<span class="line"><span style="color:#569CD6">    const</span><span style="color:#4FC1FF"> producto2</span><span style="color:#D4D4D4"> = </span><span style="color:#569CD6">new</span><span style="color:#DCDCAA"> Producto</span><span style="color:#D4D4D4">(</span><span style="color:#CE9178">'Laptop'</span><span style="color:#D4D4D4">, </span><span style="color:#B5CEA8">300</span><span style="color:#D4D4D4">);</span></span>
+<span class="line"><span style="color:#9CDCFE">    console</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">log</span><span style="color:#D4D4D4">(</span><span style="color:#CE9178">'</span><span style="color:#D7BA7D">\n</span><span style="color:#CE9178">producto2 =>'</span><span style="color:#D4D4D4">, </span><span style="color:#9CDCFE">producto2</span><span style="color:#D4D4D4">);</span></span>
+<span class="line"><span style="color:#9CDCFE">    console</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">log</span><span style="color:#D4D4D4">(</span><span style="color:#CE9178">'producto2.formatearProducto() =>'</span><span style="color:#D4D4D4">, </span><span style="color:#9CDCFE">producto2</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">formatearProducto</span><span style="color:#D4D4D4">());</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#D4D4D4">    </span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A9955">    //  -----  Instancia de Cliente  -----</span></span>
+<span class="line"><span style="color:#569CD6">    const</span><span style="color:#4FC1FF"> cliente</span><span style="color:#D4D4D4"> = </span><span style="color:#569CD6">new</span><span style="color:#DCDCAA"> Cliente</span><span style="color:#D4D4D4">(</span><span style="color:#CE9178">'Juan'</span><span style="color:#D4D4D4">, </span><span style="color:#CE9178">'De la Torre'</span><span style="color:#D4D4D4">);</span></span>
+<span class="line"><span style="color:#9CDCFE">    console</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">log</span><span style="color:#D4D4D4">(</span><span style="color:#CE9178">'</span><span style="color:#D7BA7D">\n</span><span style="color:#CE9178">cliente =>'</span><span style="color:#D4D4D4">, </span><span style="color:#9CDCFE">cliente</span><span style="color:#D4D4D4">);</span></span>
+<span class="line"><span style="color:#9CDCFE">    console</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">log</span><span style="color:#D4D4D4">(</span><span style="color:#CE9178">'cliente.formatearCliente() =>'</span><span style="color:#D4D4D4">, </span><span style="color:#9CDCFE">cliente</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">formatearCliente</span><span style="color:#D4D4D4">());</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#D4D4D4">    </span></span>
+<span class="line"><span style="color:#D4D4D4">})();</span></span>
+<span class="line"></span></code></pre>

@@ -1,0 +1,48 @@
+<pre class="shiki dark-plus" style="background-color:#1E1E1E;color:#D4D4D4" tabindex="0"><code><span class="line"><span style="color:#D4D4D4">(() </span><span style="color:#569CD6">=></span><span style="color:#D4D4D4"> {</span></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"><span style="color:#9CDCFE">    console</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">clear</span><span style="color:#D4D4D4">();</span></span>
+<span class="line"><span style="color:#9CDCFE">    console</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">log</span><span style="color:#D4D4D4">(</span><span style="color:#CE9178">'</span><span style="color:#D7BA7D">\n</span><span style="color:#CE9178">'</span><span style="color:#D4D4D4">);</span></span>
+<span class="line"><span style="color:#9CDCFE">    console</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">warn</span><span style="color:#D4D4D4">(</span><span style="color:#CE9178">'-----  30-promises.js  -----'</span><span style="color:#D4D4D4">);</span></span>
+<span class="line"><span style="color:#9CDCFE">    console</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">log</span><span style="color:#D4D4D4">(</span><span style="color:#CE9178">'</span><span style="color:#D7BA7D">\n</span><span style="color:#CE9178">'</span><span style="color:#D4D4D4">);</span></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A9955">    /*</span></span>
+<span class="line"><span style="color:#6A9955">        ----------------------</span></span>
+<span class="line"><span style="color:#6A9955">        -----  Promises  -----</span></span>
+<span class="line"><span style="color:#6A9955">        ----------------------</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A9955">        - Es un objeto que representa la terminación o el fracaso de una operación asíncrona.</span></span>
+<span class="line"><span style="color:#6A9955">        - Permite manejar operaciones asíncronas de una manera más sencilla y legible.</span></span>
+<span class="line"><span style="color:#6A9955">        - Tiene tres estados: </span></span>
+<span class="line"><span style="color:#6A9955">            - Pending:    La operación aún no se ha completado ni se ha rechazado. </span></span>
+<span class="line"><span style="color:#6A9955">            - Fulfilled : La operación se ha completado exitosamente y se ha cumplido la promesa.</span></span>
+<span class="line"><span style="color:#6A9955">            - Rejeted :   La operación ha fallado y se ha rechazado la promesa.</span></span>
+<span class="line"><span style="color:#6A9955">    */</span></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"><span style="color:#569CD6">    const</span><span style="color:#4FC1FF"> usuarioAutenticado</span><span style="color:#D4D4D4"> = </span><span style="color:#569CD6">new</span><span style="color:#4EC9B0"> Promise</span><span style="color:#D4D4D4">((</span><span style="color:#9CDCFE">resolve</span><span style="color:#D4D4D4">, </span><span style="color:#9CDCFE">reject</span><span style="color:#D4D4D4">) </span><span style="color:#569CD6">=></span><span style="color:#D4D4D4"> {</span></span>
+<span class="line"><span style="color:#D4D4D4">        </span></span>
+<span class="line"><span style="color:#569CD6">        const</span><span style="color:#4FC1FF"> auth</span><span style="color:#D4D4D4"> = </span><span style="color:#569CD6">true</span><span style="color:#D4D4D4">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#C586C0">        if</span><span style="color:#D4D4D4"> (</span><span style="color:#9CDCFE">auth</span><span style="color:#D4D4D4">) </span></span>
+<span class="line"><span style="color:#DCDCAA">            resolve</span><span style="color:#D4D4D4">(</span><span style="color:#CE9178">'</span><span style="color:#D7BA7D">\n</span><span style="color:#CE9178">Usuario Autenticado'</span><span style="color:#D4D4D4">); </span><span style="color:#6A9955">// el promise se cumple exitosamente</span></span>
+<span class="line"><span style="color:#D4D4D4">        </span></span>
+<span class="line"><span style="color:#C586C0">        else</span><span style="color:#D4D4D4"> </span></span>
+<span class="line"><span style="color:#DCDCAA">            reject</span><span style="color:#D4D4D4">(</span><span style="color:#CE9178">'</span><span style="color:#D7BA7D">\n</span><span style="color:#CE9178">No se pudo iniciar sesión'</span><span style="color:#D4D4D4">); </span><span style="color:#6A9955">// el promise no se cumple exitosamente    </span></span>
+<span class="line"><span style="color:#D4D4D4">        </span></span>
+<span class="line"><span style="color:#D4D4D4">    });</span></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"><span style="color:#9CDCFE">    console</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">log</span><span style="color:#D4D4D4">(</span><span style="color:#CE9178">'usuarioAutenticado => </span><span style="color:#D7BA7D">\n</span><span style="color:#CE9178">'</span><span style="color:#D4D4D4">, {</span><span style="color:#9CDCFE">usuarioAutenticado</span><span style="color:#D4D4D4">});</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#D4D4D4">    </span></span>
+<span class="line"><span style="color:#6A9955">    //  -----  Para consumir una promesa, se utilizan los métodos .then() y .catch()  -----</span></span>
+<span class="line"><span style="color:#9CDCFE">    usuarioAutenticado</span></span>
+<span class="line"><span style="color:#D4D4D4">        .</span><span style="color:#DCDCAA">then</span><span style="color:#D4D4D4">(</span><span style="color:#9CDCFE">resultado</span><span style="color:#569CD6"> =></span><span style="color:#9CDCFE"> console</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">log</span><span style="color:#D4D4D4">(</span><span style="color:#9CDCFE">resultado</span><span style="color:#D4D4D4">))</span></span>
+<span class="line"><span style="color:#D4D4D4">        .</span><span style="color:#DCDCAA">catch</span><span style="color:#D4D4D4">(</span><span style="color:#9CDCFE">error</span><span style="color:#569CD6"> =></span><span style="color:#9CDCFE"> console</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">log</span><span style="color:#D4D4D4">(</span><span style="color:#9CDCFE">error</span><span style="color:#D4D4D4">))</span></span>
+<span class="line"><span style="color:#D4D4D4">        .</span><span style="color:#DCDCAA">finally</span><span style="color:#D4D4D4">(() </span><span style="color:#569CD6">=></span><span style="color:#9CDCFE"> console</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">log</span><span style="color:#D4D4D4">(</span><span style="color:#CE9178">'</span><span style="color:#D7BA7D">\n</span><span style="color:#CE9178">Proceso terminado'</span><span style="color:#D4D4D4">));</span></span>
+<span class="line"><span style="color:#D4D4D4">  </span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#D4D4D4">})();</span></span>
+<span class="line"></span></code></pre>

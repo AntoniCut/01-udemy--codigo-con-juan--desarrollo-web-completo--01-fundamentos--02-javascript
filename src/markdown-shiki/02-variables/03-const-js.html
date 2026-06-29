@@ -1,0 +1,60 @@
+<pre class="shiki dark-plus" style="background-color:#1E1E1E;color:#D4D4D4" tabindex="0"><code><span class="line"><span style="color:#D4D4D4">(() </span><span style="color:#569CD6">=></span><span style="color:#D4D4D4"> {</span></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"><span style="color:#9CDCFE">    console</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">clear</span><span style="color:#D4D4D4">();</span></span>
+<span class="line"><span style="color:#9CDCFE">    console</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">log</span><span style="color:#D4D4D4">(</span><span style="color:#CE9178">'</span><span style="color:#D7BA7D">\n</span><span style="color:#CE9178">'</span><span style="color:#D4D4D4">);</span></span>
+<span class="line"><span style="color:#9CDCFE">    console</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">warn</span><span style="color:#D4D4D4">(</span><span style="color:#CE9178">'-----  03-const.js  -----'</span><span style="color:#D4D4D4">);</span></span>
+<span class="line"><span style="color:#9CDCFE">    console</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">log</span><span style="color:#D4D4D4">(</span><span style="color:#CE9178">'</span><span style="color:#D7BA7D">\n</span><span style="color:#CE9178">'</span><span style="color:#D4D4D4">);</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#D4D4D4">    </span></span>
+<span class="line"><span style="color:#6A9955">    /*  </span></span>
+<span class="line"><span style="color:#6A9955">        --------------------------------</span></span>
+<span class="line"><span style="color:#6A9955">        -----  Variables con CONST  ----</span></span>
+<span class="line"><span style="color:#6A9955">        --------------------------------</span></span>
+<span class="line"><span style="color:#6A9955">    */</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A9955">    //  -----  Iniciar variable y asignarle valor  -----</span></span>
+<span class="line"><span style="color:#569CD6">    const</span><span style="color:#4FC1FF"> producto</span><span style="color:#D4D4D4"> = </span><span style="color:#CE9178">'Audifonos Gamer'</span><span style="color:#D4D4D4">;</span></span>
+<span class="line"><span style="color:#9CDCFE">    console</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">log</span><span style="color:#D4D4D4">({ </span><span style="color:#9CDCFE">producto</span><span style="color:#D4D4D4"> });</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A9955">    //  -----  iniciamos la variable  -----</span></span>
+<span class="line"><span style="color:#569CD6">    let</span><span style="color:#9CDCFE"> disponible</span><span style="color:#D4D4D4">; </span></span>
+<span class="line"><span style="color:#9CDCFE">    console</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">log</span><span style="color:#D4D4D4">({ </span><span style="color:#9CDCFE">disponible</span><span style="color:#D4D4D4"> });</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A9955">    //  -----  Reasignando el valor de la constante  -----</span></span>
+<span class="line"><span style="color:#6A9955">    //  -----  dará error porque CONST no permite reasignar valor  -----</span></span>
+<span class="line"><span style="color:#6A9955">    //producto = true; </span></span>
+<span class="line"><span style="color:#6A9955">    //console.log({ producto });</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A9955">    //  -----  Asignando valor a la variable  -----</span></span>
+<span class="line"><span style="color:#9CDCFE">    disponible</span><span style="color:#D4D4D4"> = </span><span style="color:#569CD6">true</span><span style="color:#D4D4D4">;</span></span>
+<span class="line"><span style="color:#9CDCFE">    console</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">log</span><span style="color:#D4D4D4">({ </span><span style="color:#9CDCFE">disponible</span><span style="color:#D4D4D4"> });</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A9955">    //  -----  Declarar varias variables  -----</span></span>
+<span class="line"><span style="color:#569CD6">    const</span><span style="color:#D4D4D4"> </span></span>
+<span class="line"><span style="color:#4FC1FF">        producto1</span><span style="color:#D4D4D4"> = </span><span style="color:#CE9178">'Computadora'</span><span style="color:#D4D4D4">,</span></span>
+<span class="line"><span style="color:#4FC1FF">        disponible1</span><span style="color:#D4D4D4"> = </span><span style="color:#569CD6">true</span><span style="color:#D4D4D4">,</span></span>
+<span class="line"><span style="color:#4FC1FF">        categoria</span><span style="color:#D4D4D4"> = </span><span style="color:#CE9178">'Computadoras'</span><span style="color:#D4D4D4">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#9CDCFE">    console</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">log</span><span style="color:#D4D4D4">({ </span><span style="color:#9CDCFE">producto1</span><span style="color:#D4D4D4">, </span><span style="color:#9CDCFE">disponible1</span><span style="color:#D4D4D4">, </span><span style="color:#9CDCFE">categoria</span><span style="color:#D4D4D4"> });</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A9955">    //  -----  Nombres no permitidos para las variables  -----</span></span>
+<span class="line"><span style="color:#6A9955">    // const 1disponible;</span></span>
+<span class="line"><span style="color:#D4D4D4">    </span></span>
+<span class="line"><span style="color:#6A9955">    //  -----  iniciamos la variable pero sin valor  -----</span></span>
+<span class="line"><span style="color:#569CD6">    const</span><span style="color:#4FC1FF"> disponible_</span><span style="color:#D4D4D4"> = </span><span style="color:#569CD6">true</span><span style="color:#D4D4D4">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A9955">    //  -----  Estilos para las variables  -----</span></span>
+<span class="line"><span style="color:#569CD6">    const</span><span style="color:#4FC1FF"> nombre_producto</span><span style="color:#D4D4D4"> = </span><span style="color:#CE9178">'Monitor HD'</span><span style="color:#D4D4D4">;   </span><span style="color:#6A9955">// snake_case</span></span>
+<span class="line"><span style="color:#569CD6">    const</span><span style="color:#4FC1FF"> nombreProducto</span><span style="color:#D4D4D4"> = </span><span style="color:#CE9178">'Monitor HD'</span><span style="color:#D4D4D4">;    </span><span style="color:#6A9955">// Camelcase</span></span>
+<span class="line"><span style="color:#569CD6">    const</span><span style="color:#4FC1FF"> NombreProducto</span><span style="color:#D4D4D4"> = </span><span style="color:#CE9178">'Monitor HD'</span><span style="color:#D4D4D4">;    </span><span style="color:#6A9955">// Pascal Case</span></span>
+<span class="line"><span style="color:#569CD6">    const</span><span style="color:#4FC1FF"> nombreproducto</span><span style="color:#D4D4D4"> = </span><span style="color:#CE9178">'MonitorHD'</span><span style="color:#D4D4D4">;     </span><span style="color:#6A9955">// lowercase</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#9CDCFE">    console</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">log</span><span style="color:#D4D4D4">({ </span><span style="color:#9CDCFE">nombre_producto</span><span style="color:#D4D4D4"> });</span></span>
+<span class="line"><span style="color:#9CDCFE">    console</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">log</span><span style="color:#D4D4D4">({ </span><span style="color:#9CDCFE">nombreProducto</span><span style="color:#D4D4D4"> });</span></span>
+<span class="line"><span style="color:#9CDCFE">    console</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">log</span><span style="color:#D4D4D4">({ </span><span style="color:#9CDCFE">NombreProducto</span><span style="color:#D4D4D4"> });</span></span>
+<span class="line"><span style="color:#9CDCFE">    console</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">log</span><span style="color:#D4D4D4">({ </span><span style="color:#9CDCFE">nombreproducto</span><span style="color:#D4D4D4"> });</span></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"><span style="color:#D4D4D4">})();</span></span>
+<span class="line"></span></code></pre>

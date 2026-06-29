@@ -1,0 +1,55 @@
+<pre class="shiki dark-plus" style="background-color:#1E1E1E;color:#D4D4D4" tabindex="0"><code><span class="line"><span style="color:#D4D4D4">(() </span><span style="color:#569CD6">=></span><span style="color:#D4D4D4"> {</span></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"><span style="color:#9CDCFE">    console</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">clear</span><span style="color:#D4D4D4">();</span></span>
+<span class="line"><span style="color:#9CDCFE">    console</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">log</span><span style="color:#D4D4D4">(</span><span style="color:#CE9178">'</span><span style="color:#D7BA7D">\n</span><span style="color:#CE9178">'</span><span style="color:#D4D4D4">);</span></span>
+<span class="line"><span style="color:#9CDCFE">    console</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">warn</span><span style="color:#D4D4D4">(</span><span style="color:#CE9178">'-----  10-objetos-literales.js  -----'</span><span style="color:#D4D4D4">);</span></span>
+<span class="line"><span style="color:#9CDCFE">    console</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">log</span><span style="color:#D4D4D4">(</span><span style="color:#CE9178">'</span><span style="color:#D7BA7D">\n</span><span style="color:#CE9178">'</span><span style="color:#D4D4D4">);</span></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A9955">    //  -----  Objetos Literales  -----</span></span>
+<span class="line"><span style="color:#569CD6">    const</span><span style="color:#4FC1FF"> producto1</span><span style="color:#D4D4D4"> = {</span></span>
+<span class="line"><span style="color:#9CDCFE">        nombreProducto:</span><span style="color:#CE9178"> "Monitor 20 Pulgadas"</span><span style="color:#D4D4D4">,</span></span>
+<span class="line"><span style="color:#9CDCFE">        precio:</span><span style="color:#B5CEA8"> 300</span><span style="color:#D4D4D4">,</span></span>
+<span class="line"><span style="color:#9CDCFE">        disponible:</span><span style="color:#569CD6"> true</span></span>
+<span class="line"><span style="color:#D4D4D4">    }</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#9CDCFE">    console</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">log</span><span style="color:#D4D4D4">({ </span><span style="color:#9CDCFE">producto1</span><span style="color:#D4D4D4"> });</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#9CDCFE">    console</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">log</span><span style="color:#D4D4D4">(</span><span style="color:#CE9178">'</span><span style="color:#D7BA7D">\n</span><span style="color:#CE9178">producto1.precio => '</span><span style="color:#D4D4D4">, </span><span style="color:#9CDCFE">producto1</span><span style="color:#D4D4D4">.</span><span style="color:#9CDCFE">precio</span><span style="color:#D4D4D4">);</span></span>
+<span class="line"><span style="color:#9CDCFE">    console</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">log</span><span style="color:#D4D4D4">(</span><span style="color:#CE9178">'producto1.nombreProducto => '</span><span style="color:#D4D4D4">, </span><span style="color:#9CDCFE">producto1</span><span style="color:#D4D4D4">.</span><span style="color:#9CDCFE">nombreProducto</span><span style="color:#D4D4D4">);</span></span>
+<span class="line"><span style="color:#9CDCFE">    console</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">log</span><span style="color:#D4D4D4">(</span><span style="color:#CE9178">'producto1.disponible => '</span><span style="color:#D4D4D4">, </span><span style="color:#9CDCFE">producto1</span><span style="color:#D4D4D4">.</span><span style="color:#9CDCFE">disponible</span><span style="color:#D4D4D4">);</span></span>
+<span class="line"><span style="color:#9CDCFE">    console</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">log</span><span style="color:#D4D4D4">(</span><span style="color:#CE9178">'producto1["precio"] => '</span><span style="color:#D4D4D4">, </span><span style="color:#9CDCFE">producto1</span><span style="color:#D4D4D4">[</span><span style="color:#CE9178">"precio"</span><span style="color:#D4D4D4">]);</span></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A9955">    /*</span></span>
+<span class="line"><span style="color:#6A9955">        -------------------------------------------------------</span></span>
+<span class="line"><span style="color:#6A9955">        -----  Agregar, eliminar y modificar propiedades  -----</span></span>
+<span class="line"><span style="color:#6A9955">        -------------------------------------------------------</span></span>
+<span class="line"><span style="color:#6A9955">    */</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A9955">    //  -----  otro objeto literal  -----</span></span>
+<span class="line"><span style="color:#569CD6">    const</span><span style="color:#4FC1FF"> producto2</span><span style="color:#D4D4D4"> = {</span></span>
+<span class="line"><span style="color:#9CDCFE">        nombreProducto:</span><span style="color:#CE9178"> "Laptop Gamer"</span><span style="color:#D4D4D4">,</span></span>
+<span class="line"><span style="color:#9CDCFE">        precio:</span><span style="color:#B5CEA8"> 1500</span><span style="color:#D4D4D4">,</span></span>
+<span class="line"><span style="color:#9CDCFE">        disponible:</span><span style="color:#569CD6"> true</span><span style="color:#D4D4D4">,</span></span>
+<span class="line"><span style="color:#9CDCFE">        imagen:</span><span style="color:#CE9178"> 'laptop.jpg'</span></span>
+<span class="line"><span style="color:#D4D4D4">    }</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#9CDCFE">    console</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">log</span><span style="color:#D4D4D4">(</span><span style="color:#CE9178">'</span><span style="color:#D7BA7D">\n</span><span style="color:#CE9178">producto2 => '</span><span style="color:#D4D4D4">, { </span><span style="color:#9CDCFE">producto2</span><span style="color:#D4D4D4"> });</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A9955">    //  -----  Agregar nuevas propiedades  -----</span></span>
+<span class="line"><span style="color:#9CDCFE">    producto2</span><span style="color:#D4D4D4">.</span><span style="color:#9CDCFE">imagen</span><span style="color:#D4D4D4"> = </span><span style="color:#CE9178">'imagen.jpg'</span><span style="color:#D4D4D4">;</span></span>
+<span class="line"><span style="color:#9CDCFE">    console</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">log</span><span style="color:#D4D4D4">(</span><span style="color:#CE9178">'producto2.imagen => '</span><span style="color:#D4D4D4">, </span><span style="color:#9CDCFE">producto2</span><span style="color:#D4D4D4">.</span><span style="color:#9CDCFE">imagen</span><span style="color:#D4D4D4">);</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A9955">    //  -----  Modificar propiedades  -----</span></span>
+<span class="line"><span style="color:#9CDCFE">    producto2</span><span style="color:#D4D4D4">.</span><span style="color:#9CDCFE">precio</span><span style="color:#D4D4D4"> = </span><span style="color:#B5CEA8">1200</span><span style="color:#D4D4D4">;</span></span>
+<span class="line"><span style="color:#9CDCFE">    console</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">log</span><span style="color:#D4D4D4">(</span><span style="color:#CE9178">'producto2.precio => '</span><span style="color:#D4D4D4">, </span><span style="color:#9CDCFE">producto2</span><span style="color:#D4D4D4">.</span><span style="color:#9CDCFE">precio</span><span style="color:#D4D4D4">);</span></span>
+<span class="line"><span style="color:#D4D4D4">    </span></span>
+<span class="line"><span style="color:#6A9955">    //  -----  Eliminar propiedades  -----</span></span>
+<span class="line"><span style="color:#569CD6">    delete</span><span style="color:#9CDCFE"> producto2</span><span style="color:#D4D4D4">.</span><span style="color:#9CDCFE">disponible</span><span style="color:#D4D4D4">;</span></span>
+<span class="line"><span style="color:#9CDCFE">    console</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">log</span><span style="color:#D4D4D4">(</span><span style="color:#CE9178">'</span><span style="color:#D7BA7D">\n</span><span style="color:#CE9178">producto2 después de eliminar disponible => '</span><span style="color:#D4D4D4">, { </span><span style="color:#9CDCFE">producto2</span><span style="color:#D4D4D4"> });</span></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"><span style="color:#D4D4D4">})();</span></span>
+<span class="line"></span></code></pre>

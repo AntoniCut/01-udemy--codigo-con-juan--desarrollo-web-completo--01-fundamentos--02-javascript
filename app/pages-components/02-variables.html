@@ -1,0 +1,125 @@
+<!--
+    *  ---------------------------------------------------------------  *
+    *  -----  /02-variables.html  --  /src/pages-components/02-variables.html  -----  *
+    *  ---------------------------------------------------------------  *
+-->
+
+<div class="js-page">
+
+    <!--  -----  Hero  -----  -->
+    <div class="js-page__hero">
+        <div class="js-page__hero-badge">
+            <span class="js-page__hero-tag" aria-hidden="true">02</span>
+            <h3 class="js-page__hero-title">Variables</h3>
+            <p class="js-page__hero-subtitle">var, let y const — el alma de tus datos</p>
+        </div>
+    </div>
+
+    <!--  -----  Intro  -----  -->
+    <section class="js-page__intro">
+        <p class="js-page__intro-text">
+            Las <strong>variables</strong> son contenedores con nombre que permiten almacenar
+            valores en memoria. Son el bloque más básico de cualquier programa JavaScript: sin
+            ellas no podrías guardar resultados, contar iteraciones ni modelar información.
+        </p>
+        <p class="js-page__intro-text">
+            JavaScript ofrece tres formas de declararlas: <code>var</code> (clásica, con
+            scope de función), <code>let</code> (moderna, con scope de bloque) y
+            <code>const</code> (constante, no reasignable). Conocer las diferencias entre
+            ellas es clave para escribir código predecible y libre de bugs.
+        </p>
+    </section>
+
+    <!--  -----  Features  -----  -->
+    <section class="js-page__features">
+
+        <h3 class="js-page__features-title">Conceptos que verás</h3>
+
+        <div class="js-page__features-grid">
+
+            <article class="js-page__feature">
+                <span class="js-page__feature-icon" aria-hidden="true">📦</span>
+                <h4 class="js-page__feature-title">var</h4>
+                <p class="js-page__feature-text">
+                    Declaración clásica con <strong>scope de función</strong> y hoisting.
+                    Permite redeclarar y reasignar, pero su comportamiento puede
+                    generar bugs difíciles de rastrear.
+                </p>
+            </article>
+
+            <article class="js-page__feature">
+                <span class="js-page__feature-icon" aria-hidden="true">🔒</span>
+                <h4 class="js-page__feature-title">let</h4>
+                <p class="js-page__feature-text">
+                    Declaración moderna con <strong>scope de bloque</strong>.
+                    Ideal para variables cuyo valor cambia (contadores, acumuladores,
+                    estados en bucles).
+                </p>
+            </article>
+
+            <article class="js-page__feature">
+                <span class="js-page__feature-icon" aria-hidden="true">🔐</span>
+                <h4 class="js-page__feature-title">const</h4>
+                <p class="js-page__feature-text">
+                    Declara una <strong>referencia constante</strong>: no se puede
+                    reasignar el identificador, aunque el contenido del objeto/array
+                    sí puede mutar.
+                </p>
+            </article>
+
+            <article class="js-page__feature">
+                <span class="js-page__feature-icon" aria-hidden="true">🔄</span>
+                <h4 class="js-page__feature-title">Reasignación</h4>
+                <p class="js-page__feature-text">
+                    <code>let</code> y <code>var</code> permiten reasignar el valor
+                    de la variable. <code>const</code> no. Diferencia crucial para
+                    datos mutables e inmutables.
+                </p>
+            </article>
+
+            <article class="js-page__feature">
+                <span class="js-page__feature-icon" aria-hidden="true">🏷️</span>
+                <h4 class="js-page__feature-title">Estilos de nombrado</h4>
+                <p class="js-page__feature-text">
+                    <code>camelCase</code> (recomendado), <code>snake_case</code>,
+                    <code>PascalCase</code> y <code>lowercase</code>. Convenciones
+                    del lenguaje y cuándo usar cada una.
+                </p>
+            </article>
+
+            <article class="js-page__feature">
+                <span class="js-page__feature-icon" aria-hidden="true">🧠</span>
+                <h4 class="js-page__feature-title">Buenas prácticas</h4>
+                <p class="js-page__feature-text">
+                    Usa <code>const</code> por defecto, <code>let</code> solo cuando
+                    necesites reasignar, y evita <code>var</code> en código moderno.
+                    Reglas de oro para un JS limpio.
+                </p>
+            </article>
+
+        </div>
+    </section>
+
+    <!--  -----  Conceptos clave  -----  -->
+    <section class="js-page__tags-section">
+
+        <h3 class="js-page__tags-title">Conceptos Clave</h3>
+
+        <ul class="js-page__tags">
+            <li class="js-page__tag">var</li>
+            <li class="js-page__tag">let</li>
+            <li class="js-page__tag">const</li>
+            <li class="js-page__tag">Scope</li>
+            <li class="js-page__tag">Hoisting</li>
+            <li class="js-page__tag">Reasignación</li>
+            <li class="js-page__tag">Inmutabilidad</li>
+            <li class="js-page__tag">camelCase</li>
+            <li class="js-page__tag">snake_case</li>
+            <li class="js-page__tag">PascalCase</li>
+            <li class="js-page__tag">Declaración</li>
+            <li class="js-page__tag">Inicialización</li>
+        </ul>
+
+    </section>
+
+</div>

@@ -1,0 +1,96 @@
+<pre class="shiki dark-plus" style="background-color:#1E1E1E;color:#D4D4D4" tabindex="0"><code><span class="line"><span style="color:#D4D4D4">(() </span><span style="color:#569CD6">=></span><span style="color:#D4D4D4"> {</span></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"><span style="color:#9CDCFE">    console</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">clear</span><span style="color:#D4D4D4">();</span></span>
+<span class="line"><span style="color:#9CDCFE">    console</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">log</span><span style="color:#D4D4D4">(</span><span style="color:#CE9178">'</span><span style="color:#D7BA7D">\n</span><span style="color:#CE9178">'</span><span style="color:#D4D4D4">);</span></span>
+<span class="line"><span style="color:#9CDCFE">    console</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">warn</span><span style="color:#D4D4D4">(</span><span style="color:#CE9178">'-----  14-arreglos.js  -----'</span><span style="color:#D4D4D4">);</span></span>
+<span class="line"><span style="color:#9CDCFE">    console</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">log</span><span style="color:#D4D4D4">(</span><span style="color:#CE9178">'</span><span style="color:#D7BA7D">\n</span><span style="color:#CE9178">'</span><span style="color:#D4D4D4">);</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A9955">    //  -----  Arreglos o Arrays  -----</span></span>
+<span class="line"><span style="color:#569CD6">    const</span><span style="color:#4FC1FF"> numeros</span><span style="color:#D4D4D4"> = [</span><span style="color:#B5CEA8">10</span><span style="color:#D4D4D4">, </span><span style="color:#B5CEA8">20</span><span style="color:#D4D4D4">, </span><span style="color:#B5CEA8">30</span><span style="color:#D4D4D4">, </span><span style="color:#B5CEA8">40</span><span style="color:#D4D4D4">, </span><span style="color:#B5CEA8">50</span><span style="color:#D4D4D4">];</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#9CDCFE">    console</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">log</span><span style="color:#D4D4D4">(</span><span style="color:#CE9178">'----- numeros[] -----'</span><span style="color:#D4D4D4">);</span></span>
+<span class="line"><span style="color:#9CDCFE">    console</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">table</span><span style="color:#D4D4D4">(</span><span style="color:#9CDCFE">numeros</span><span style="color:#D4D4D4">);</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A9955">     //  -----  Acceder a los valores de un arreglo  -----</span></span>
+<span class="line"><span style="color:#9CDCFE">    console</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">log</span><span style="color:#D4D4D4">(</span><span style="color:#CE9178">'</span><span style="color:#D7BA7D">\n</span><span style="color:#CE9178">numeros[0] => '</span><span style="color:#D4D4D4">, </span><span style="color:#9CDCFE">numeros</span><span style="color:#D4D4D4">[</span><span style="color:#B5CEA8">0</span><span style="color:#D4D4D4">]);</span></span>
+<span class="line"><span style="color:#9CDCFE">    console</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">log</span><span style="color:#D4D4D4">(</span><span style="color:#CE9178">'numeros[1] => '</span><span style="color:#D4D4D4">, </span><span style="color:#9CDCFE">numeros</span><span style="color:#D4D4D4">[</span><span style="color:#B5CEA8">1</span><span style="color:#D4D4D4">]);</span></span>
+<span class="line"><span style="color:#9CDCFE">    console</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">log</span><span style="color:#D4D4D4">(</span><span style="color:#CE9178">'numeros[2] => '</span><span style="color:#D4D4D4">, </span><span style="color:#9CDCFE">numeros</span><span style="color:#D4D4D4">[</span><span style="color:#B5CEA8">2</span><span style="color:#D4D4D4">]);</span></span>
+<span class="line"><span style="color:#9CDCFE">    console</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">log</span><span style="color:#D4D4D4">(</span><span style="color:#CE9178">'numeros[3] => '</span><span style="color:#D4D4D4">, </span><span style="color:#9CDCFE">numeros</span><span style="color:#D4D4D4">[</span><span style="color:#B5CEA8">3</span><span style="color:#D4D4D4">]);</span></span>
+<span class="line"><span style="color:#9CDCFE">    console</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">log</span><span style="color:#D4D4D4">(</span><span style="color:#CE9178">'numeros[4] => '</span><span style="color:#D4D4D4">, </span><span style="color:#9CDCFE">numeros</span><span style="color:#D4D4D4">[</span><span style="color:#B5CEA8">4</span><span style="color:#D4D4D4">]);</span></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A9955">    //  -----  Crear un arreglo con el constructor Array()  -----</span></span>
+<span class="line"><span style="color:#569CD6">    const</span><span style="color:#4FC1FF"> meses</span><span style="color:#D4D4D4"> = </span><span style="color:#569CD6">new</span><span style="color:#DCDCAA"> Array</span><span style="color:#D4D4D4">(</span></span>
+<span class="line"><span style="color:#CE9178">        'Enero'</span><span style="color:#D4D4D4">, </span></span>
+<span class="line"><span style="color:#CE9178">        'Febrero'</span><span style="color:#D4D4D4">, </span></span>
+<span class="line"><span style="color:#CE9178">        'Marzo'</span><span style="color:#D4D4D4">, </span></span>
+<span class="line"><span style="color:#CE9178">        'Abril'</span><span style="color:#D4D4D4">, </span></span>
+<span class="line"><span style="color:#CE9178">        'Mayo'</span><span style="color:#D4D4D4">, </span></span>
+<span class="line"><span style="color:#CE9178">        'Junio'</span><span style="color:#D4D4D4">, </span></span>
+<span class="line"><span style="color:#CE9178">        'Julio'</span><span style="color:#D4D4D4">, </span></span>
+<span class="line"><span style="color:#CE9178">        'Agosto'</span><span style="color:#D4D4D4">, </span></span>
+<span class="line"><span style="color:#CE9178">        'Septiembre'</span><span style="color:#D4D4D4">, </span></span>
+<span class="line"><span style="color:#CE9178">        'Octubre'</span><span style="color:#D4D4D4">, </span></span>
+<span class="line"><span style="color:#CE9178">        'Noviembre'</span><span style="color:#D4D4D4">, </span></span>
+<span class="line"><span style="color:#CE9178">        'Diciembre'</span></span>
+<span class="line"><span style="color:#D4D4D4">    );</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#9CDCFE">    console</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">log</span><span style="color:#D4D4D4">(</span><span style="color:#CE9178">'</span><span style="color:#D7BA7D">\n</span><span style="color:#CE9178">----- meses[] -----'</span><span style="color:#D4D4D4">);</span></span>
+<span class="line"><span style="color:#9CDCFE">    console</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">table</span><span style="color:#D4D4D4">(</span><span style="color:#9CDCFE">meses</span><span style="color:#D4D4D4">);</span></span>
+<span class="line"><span style="color:#D4D4D4">   </span></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A9955">    //  -----  Conocer la extensión de un arreglo  -----</span></span>
+<span class="line"><span style="color:#9CDCFE">    console</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">log</span><span style="color:#D4D4D4">(</span><span style="color:#CE9178">'</span><span style="color:#D7BA7D">\n</span><span style="color:#CE9178">meses.length => '</span><span style="color:#D4D4D4">, </span><span style="color:#9CDCFE">meses</span><span style="color:#D4D4D4">.</span><span style="color:#9CDCFE">length</span><span style="color:#D4D4D4">);</span></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A9955">    //  -----  Recorrer un arreglo con forEach()  -----</span></span>
+<span class="line"><span style="color:#9CDCFE">    console</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">log</span><span style="color:#D4D4D4">(</span><span style="color:#CE9178">'</span><span style="color:#D7BA7D">\n</span><span style="color:#CE9178">----- Recorrer arreglo - numeros - con forEach -----'</span><span style="color:#D4D4D4">);</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#9CDCFE">    numeros</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">forEach</span><span style="color:#D4D4D4">( </span><span style="color:#569CD6">function</span><span style="color:#D4D4D4">(</span><span style="color:#9CDCFE">numero</span><span style="color:#D4D4D4">) {</span></span>
+<span class="line"><span style="color:#9CDCFE">         console</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">log</span><span style="color:#D4D4D4">(</span><span style="color:#9CDCFE">numero</span><span style="color:#D4D4D4">);</span></span>
+<span class="line"><span style="color:#D4D4D4">    });</span></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A9955">    /*  </span></span>
+<span class="line"><span style="color:#6A9955">        -------------------------------------</span></span>
+<span class="line"><span style="color:#6A9955">        -----  Métodos de los arreglos  -----</span></span>
+<span class="line"><span style="color:#6A9955">        -------------------------------------</span></span>
+<span class="line"><span style="color:#6A9955">    */</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A9955">    //  -----  Agregar elementos a un arreglo al final  -----</span></span>
+<span class="line"><span style="color:#9CDCFE">    numeros</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">push</span><span style="color:#D4D4D4">(</span><span style="color:#B5CEA8">60</span><span style="color:#D4D4D4">, </span><span style="color:#B5CEA8">70</span><span style="color:#D4D4D4">, </span><span style="color:#B5CEA8">80</span><span style="color:#D4D4D4">); </span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A9955">    //  -----  Agregar elementos a un arreglo al inicio  -----</span></span>
+<span class="line"><span style="color:#9CDCFE">    numeros</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">unshift</span><span style="color:#D4D4D4">(-</span><span style="color:#B5CEA8">10</span><span style="color:#D4D4D4">, -</span><span style="color:#B5CEA8">20</span><span style="color:#D4D4D4">, -</span><span style="color:#B5CEA8">30</span><span style="color:#D4D4D4">);</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#9CDCFE">    console</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">log</span><span style="color:#D4D4D4">(</span><span style="color:#CE9178">'</span><span style="color:#D7BA7D">\n</span><span style="color:#CE9178">----- numeros[] - Agregar elementos al inicio y al final -----'</span><span style="color:#D4D4D4">);</span></span>
+<span class="line"><span style="color:#9CDCFE">    console</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">table</span><span style="color:#D4D4D4">(</span><span style="color:#9CDCFE">numeros</span><span style="color:#D4D4D4">);</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A9955">    //const meses = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo'];</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A9955">    //  -----  Eliminar el ultimo elemento de un arreglo  -----</span></span>
+<span class="line"><span style="color:#9CDCFE">    meses</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">pop</span><span style="color:#D4D4D4">(); </span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A9955">    //  -----  Eliminar el primer elemento de un arreglo  -----</span></span>
+<span class="line"><span style="color:#9CDCFE">    meses</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">shift</span><span style="color:#D4D4D4">(); </span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#9CDCFE">    console</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">log</span><span style="color:#D4D4D4">(</span><span style="color:#CE9178">'</span><span style="color:#D7BA7D">\n</span><span style="color:#CE9178">----- meses[] - Eliminar el primer y el ultimo elemento -----'</span><span style="color:#D4D4D4">);</span></span>
+<span class="line"><span style="color:#9CDCFE">    console</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">table</span><span style="color:#D4D4D4">(</span><span style="color:#9CDCFE">meses</span><span style="color:#D4D4D4">);</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A9955">    //  -----  Eliminar elementos de un arreglo con splice()  -----</span></span>
+<span class="line"><span style="color:#9CDCFE">    meses</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">splice</span><span style="color:#D4D4D4">(</span><span style="color:#B5CEA8">2</span><span style="color:#D4D4D4">, </span><span style="color:#B5CEA8">1</span><span style="color:#D4D4D4">);</span></span>
+<span class="line"><span style="color:#9CDCFE">    console</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">log</span><span style="color:#D4D4D4">(</span><span style="color:#CE9178">'</span><span style="color:#D7BA7D">\n</span><span style="color:#CE9178">----- meses[] - Eliminar elementos con splice() -----'</span><span style="color:#D4D4D4">);</span></span>
+<span class="line"><span style="color:#9CDCFE">    console</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">table</span><span style="color:#D4D4D4">(</span><span style="color:#9CDCFE">meses</span><span style="color:#D4D4D4">);</span></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A9955">    //  -----  Rest Operator o Spread Operator  -----</span></span>
+<span class="line"><span style="color:#569CD6">    const</span><span style="color:#4FC1FF"> nuevoArreglo</span><span style="color:#D4D4D4"> = [</span><span style="color:#CE9178">'Junio'</span><span style="color:#D4D4D4">, ...</span><span style="color:#9CDCFE">meses</span><span style="color:#D4D4D4">];</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#9CDCFE">    console</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">log</span><span style="color:#D4D4D4">(</span><span style="color:#CE9178">'</span><span style="color:#D7BA7D">\n</span><span style="color:#CE9178">----- nuevoArreglo[] = [</span><span style="color:#D7BA7D">\'</span><span style="color:#CE9178">Junio</span><span style="color:#D7BA7D">\'</span><span style="color:#CE9178">, ...meses] - Rest Operator o Spread Operator -----'</span><span style="color:#D4D4D4">);</span></span>
+<span class="line"><span style="color:#9CDCFE">    console</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">table</span><span style="color:#D4D4D4">(</span><span style="color:#9CDCFE">nuevoArreglo</span><span style="color:#D4D4D4">);</span></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"><span style="color:#D4D4D4">})();</span></span>
+<span class="line"></span></code></pre>
