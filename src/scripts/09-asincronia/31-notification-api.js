@@ -37,7 +37,7 @@
         if (permiso === 'granted') {
             
             new Notification('Esta es una notificación', {
-                icon: '/assets/logos/desarrollo-web-completo-logo.ico',
+                icon: '/codigo-con-juan/desarrollo-web-completo/01-fundamentos/02-javascript/assets/logos/desarrollo-web-completo-logo.png',
                 body: 'Curso Desarrollo web completo - Código con Juan'
             });
         }
