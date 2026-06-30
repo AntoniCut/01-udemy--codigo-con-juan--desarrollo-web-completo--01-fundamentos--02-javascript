@@ -22,6 +22,8 @@ export const route09Asincronia = {
     },
     pagesComponents: [
         { url: `${pagesComponents}/09-asincronia.html`, target: '[data-component-page="asincronia"]' },
+        { url: `${pagesComponents}/09-35-fetch-api-promise.html`, target: '[data-component-page="fetchApiPromise"]' },
+        { url: `${pagesComponents}/09-36-fetch-api-async-await.html`, target: '[data-component-page="fetchApiAsyncAwait"]' },
     ],
     MarkdownShikiHtml: [
         { url: `${MarkdownShikiHtml}/09-asincronia/29-try-catch-js.html`, target: '[data-shiki="code29TryCatch"]' },

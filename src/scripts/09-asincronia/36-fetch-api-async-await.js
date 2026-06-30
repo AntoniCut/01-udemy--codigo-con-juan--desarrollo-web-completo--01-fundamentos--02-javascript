@@ -56,7 +56,17 @@
          */
 
         const url = 'app/services/empleados.json';
-       
+
+
+        //  -----  Buscar el contenedor JUSTO ANTES de usarlo (puede que el pages-component se inyecte después)  -----
+        /** @type {HTMLDivElement|null} */
+        const contenidoAsyncAwait = document.querySelector('.contenido-fetch-async-await');
+
+        if (!contenidoAsyncAwait) {
+            console.error('No se encontró el contenedor para renderizar los empleados.');
+            return;
+        }
+
 
         //  ----- Realizar la petición utilizando fetch y esperar la respuesta  -----
         const resultado = await fetch(url);
@@ -91,14 +101,9 @@
                     `ID: ${id} | Nombre: ${nombre} ${apellido} | Email: ${email} | Puesto: ${puesto}`
                 );
 
-                /** @type {HTMLDivElement|null} */
-                const contenido = document.querySelector('.contenido');
-
-                if (!contenido)
-                    return;
 
                 //  ----- Agregar la información del empleado al contenido del HTML  -----
-                contenido.innerHTML += `
+                contenidoAsyncAwait.innerHTML += `
                             <li>
                                 <strong>ID:</strong> ${id} <br>
                                 <strong>Nombre:</strong> ${nombre} - ${apellido} <br>

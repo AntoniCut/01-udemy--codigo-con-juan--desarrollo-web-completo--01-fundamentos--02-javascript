@@ -26,6 +26,9 @@
     console.log('\n');
 
 
+    //*  -----  referencias al HTML (se buscan DENTRO de la función para esperar al pages-component)  -----
+
+
     /**
      * -------------------------------------------------
      * -----  obtenerEmpleados()  ----------------------
@@ -54,56 +57,63 @@
          *
          * @type {string}
          */
-        
+
         //const url = './src/services/empleados.json';
         const url = 'app/services/empleados.json';
+
+
+        //  -----  Buscar el contenedor JUSTO ANTES de usarlo (puede que el pages-component se inyecte después)  -----
+        /** @type {HTMLDivElement|null} */
+        const contenidoPromise = document.querySelector('.main__container .contenido-fetch-promise');
+
+        console.log(`[35] contenido encontrado:`, contenidoPromise);
+
+        if (!contenidoPromise) {
+            console.error('No se encontró el contenedor para renderizar los empleados.');
+            return;
+        }
 
 
         fetch(url)
 
             .then(resultado => {
-                
+
                 console.log('\nResultado de la petición:', resultado);
                 return resultado.json();
             })
 
 
-            
+
             .then(
-            
+
                 /** @param {EmpleadosResponse} datos */
                 datos => {
 
-                console.log('\nDatos completos:', datos);
+                    console.log('\nDatos completos:', datos);
 
-                
-                //  ----- Desestructuración para extraer el arreglo de empleados  -----
-                const { empleados } = datos;
 
-                console.log('\nListado de empleados:', empleados);
+                    //  ----- Desestructuración para extraer el arreglo de empleados  -----
+                    const { empleados } = datos;
 
-                
-                //  ----- Recorrer el arreglo de empleados y mostrar su información  -----
-                empleados.forEach(
-                    
-                    /** @param {Empleado} empleado */    
-                    empleado => {
-                    
-                        //  ----- Desestructuración para extraer propiedades del empleado  -----
-                        const { id, nombre, apellido, email, puesto } = empleado;
+                    console.log('\nListado de empleados:', empleados);
 
-                        console.log(
-                            `ID: ${id} | Nombre: ${nombre} ${apellido} | Email: ${email} | Puesto: ${puesto}`
-                        );
 
-                        /** @type {HTMLDivElement|null} */
-                        const contenido = document.querySelector('.contenido');
-                    
-                        if (!contenido) 
-                            return;
-                    
-                        //  ----- Agregar la información del empleado al contenido del HTML  -----
-                        contenido.innerHTML += `
+                    //  ----- Recorrer el arreglo de empleados y mostrar su información  -----
+                    empleados.forEach(
+
+                        /** @param {Empleado} empleado */
+                        empleado => {
+
+                            //  ----- Desestructuración para extraer propiedades del empleado  -----
+                            const { id, nombre, apellido, email, puesto } = empleado;
+
+                            console.log(
+                                `ID: ${id} | Nombre: ${nombre} ${apellido} | Email: ${email} | Puesto: ${puesto}`
+                            );
+
+
+                            //  ----- Agregar la información del empleado al contenido del HTML  -----
+                            contenidoPromise.innerHTML += `
                             <li>
                                 <strong>ID:</strong> ${id} <br>
                                 <strong>Nombre:</strong> ${nombre} - ${apellido} <br>
@@ -113,12 +123,14 @@
                             <br> <br>
                         `;
 
-                    }
+                            console.log(`[35] Renderizado empleado: ${id}`);
 
-                );
+                        }
+
+                    );
 
 
-            })
+                })
 
 
             .catch(error => {

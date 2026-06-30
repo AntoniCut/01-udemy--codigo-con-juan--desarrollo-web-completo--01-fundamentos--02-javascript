@@ -392,37 +392,26 @@ export const spaLoaderContentHtml = (options = {}) => {
      * -----  `loadContent(route)`  -----
      * ----------------------------------
      * - `Función para cargar el contenido de una ruta específica`
-     * - Si el navegador soporta View Transitions, se usa para una transición suave.
-     * - Si no, se carga directamente el contenido.
-    * @param {Route} route - Ruta cuya contenido se va a cargar.
-     * @returns {void} - No devuelve nada, pero carga el contenido de la ruta o notifica error si falla.
+     * - Ejecuta `loadComponentDom` sin envolverlo en una View Transition.
+     * - Como el callback de carga realiza múltiples `fetch()` asíncronos, Chrome abortaría
+     *   la transición por su timeout interno (TimeoutError). El DOM se actualiza correctamente
+     *   de todas formas, por lo que la transición es prescindible aquí.
+     * @param {Route} route - Ruta cuyo contenido se va a cargar.
+     * @returns {Promise<void>} - Promesa que se resuelve al terminar la carga; notifica error si falla.
      */
+    const loadContent = async (route) => {
 
-    const loadContent = (route) => {
+        try {
 
-        /** @type {Promise<void>} - `Promesa de carga del contenido de la ruta` */
-        let loadPromise;
+            //  -----  Cargar el contenido de la ruta directamente (sin View Transition)  -----
+            await loadComponentDom(route);
 
-        //  -----  Si el navegador soporta View Transitions, se usa para una transición suave  -----
-        if (document.startViewTransition) {
+        } catch (error) {
 
-            /** Inicia una transicion de vista y ejecuta la carga del DOM de la ruta. */
-            const viewTransition = document.startViewTransition(() => loadComponentDom(route));
-
-            //  -----  La promesa de carga se resuelve cuando la transición termina, o inmediatamente si no se puede usar la transición  -----
-            loadPromise = viewTransition?.finished || Promise.resolve();
-        }
-
-        //  -----  Si no, se carga directamente el contenido  -----
-        else
-
-            //  -----  Cargar el contenido de la ruta sin transición  -----
-            loadPromise = loadComponentDom(route);
-
-        //  -----  Manejo de errores en la carga del contenido para notificar y evitar bloqueos del loader  -----
-        Promise.resolve(loadPromise).catch((error) => {
+            //  -----  Notificar error de carga para desbloquear el loader y permitir fallback  -----
             notifyRouteLoadError(route, error, 'loadContent');
-        });
+
+        }
 
     };
 
@@ -537,15 +526,18 @@ export const spaLoaderContentHtml = (options = {}) => {
 
             console.warn(`La ruta '${route.id}' no contiene 'components'`);
 
-            //  -----  Aplicar metadatos de la ruta incluso si no hay componentes para cargar, para asegurar que título, favicon, etc. se actualicen correctamente  -----
+            //  -----  Renderizar componentes de página (pagesComponents) aunque la ruta no defina 'components'  -----
+            //  -----  Debe ejecutarse ANTES que applyRouteMeta, ya que esta última carga los 'scripts'     -----
+            //  -----  de la ruta, y esos scripts pueden referenciar contenedores inyectados por pagesComponents.  -----
+            await renderPageComponents(route);
+
+            //  -----  Aplicar metadatos de la ruta (título, favicon, estilos, markdown-shiki y scripts)  -----
+            //  -----  ahora que los contenedores del page-component ya existen en el DOM.  -----
             await applyRouteMeta(route);
 
             //  -----  Notificar fin de carga de ruta para el loader inicial y listeners externos incluso si no hay componentes,  -----
             //  -----  para asegurar que el loader se desbloquee y los listeners se notifiquen correctamente                      -----
             notifyRouteLoaded(route);
-
-            //  -----  Renderizar componentes de página (pagesComponents) aunque la ruta no defina 'components'  -----
-            await renderPageComponents(route);
 
             return;
         }
@@ -609,11 +601,14 @@ export const spaLoaderContentHtml = (options = {}) => {
         }
 
 
-        //  -----  Aplicar metadatos de la ruta  -----
-        await applyRouteMeta(route);
-
         //  -----  Renderizar componentes de página (pagesComponents) dentro de la vista ya cargada  -----
+        //  -----  Debe ejecutarse ANTES que applyRouteMeta, ya que esta última carga los 'scripts'  -----
+        //  -----  de la ruta, y esos scripts pueden referenciar contenedores inyectados por pagesComponents.  -----
         await renderPageComponents(route);
+
+        //  -----  Aplicar metadatos de la ruta (título, favicon, estilos, markdown-shiki y scripts)  -----
+        //  -----  ahora que los contenedores del page-component ya existen en el DOM.  -----
+        await applyRouteMeta(route);
 
         //  -----  Notificar fin de carga de ruta para el loader inicial y listeners externos  -----
         notifyRouteLoaded(route);
